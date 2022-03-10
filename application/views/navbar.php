@@ -15,19 +15,19 @@
 			<div class="container-fluid">
 				<ul class="navbar-nav">
 					<li class="nav-item">
-						<a class="nav-link" href="#">Home</a>
+						<a class="nav-link" href="<?php echo base_url(); ?>index.php/Home">Home</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Menu</a>
+						<a class="nav-link" href="<?php echo base_url(); ?>index.php/Menu">Menu</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Contact Us</a>
+						<a class="nav-link" href="<?php echo base_url(); ?>index.php/Contact">Contact Us</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#">Account</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Checkout</a>
+						<a class="nav-link" href="<?php echo base_url(); ?>index.php/Checkout">Checkout</a>
 					</li>
 				</ul>
 			</div>
