@@ -1,8 +1,6 @@
 <html>
-<div class="container py-3">
 
-</div>
-	<div class="container border border-3 py-3 text-center">
+	<div class="container border border-3 my-3 text-center rounded">
 		<h1>Order Online</h1>
 		<div class="d-grid gap-2 col-6 mx-auto">
 			<a

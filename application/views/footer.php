@@ -1,5 +1,5 @@
 <html>
-	<div class="container-fluid bg-dark text-white">
+	<div class="container-fluid bg-dark text-white my-2">
 		<div class="row text-center">
 			<div class="col py-1">
 				<h4>Online Ordering System</h4>

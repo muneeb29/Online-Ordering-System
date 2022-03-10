@@ -7,7 +7,7 @@
 
 	<body>
 
-    <div class="container rounded text-center">
+    <div class="container rounded text-center my-3">
       <h1>Online Food Ordering</h1>
     </div>
 
