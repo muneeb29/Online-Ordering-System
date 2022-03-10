@@ -2,7 +2,7 @@
 
 	<div class="container border border-3 my-3 text-center rounded">
 		<h1>Order Online</h1>
-		<div class="d-grid gap-2 col-6 mx-auto">
+		<div class="d-grid gap-2 col-6 mx-auto mb-2">
 			<a
 				href="<?php echo base_url(); ?>index.php/Menu"
 				role="button"
@@ -13,6 +13,6 @@
 	</div>
 
 	<div class="text-center">
-		<img src="<?php echo base_url(); ?>application/images/burger.jpg" alt="" />
+		<img src="<?php echo base_url(); ?>application/images/burgern.jpeg" alt="burger image" style="size: auto" />
 	</div>
 </html>

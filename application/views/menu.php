@@ -1,16 +1,17 @@
 <html>
-	<div class="container py-2"></div>
-
-	<div class="container">
+	<div class="container my-3">
 		<div class="row">
 			<div class="col">
 				<select name="" id="">
-					<option value="">Starter</option>
+				<option value="" disabled selected>Select One</option>
+					<option value="Starters">Starters</option>
+					<option value="Main">Main Course</option>
+					<option value="Drinks">Drinks</option>
 				</select>
 			</div>
 
 			<div class="col text-end ">
-				<input type="text" placeholder="Search" />
+				<input type="text" placeholder="Search Menu" />
 			</div>
 		</div>
 	</div>
