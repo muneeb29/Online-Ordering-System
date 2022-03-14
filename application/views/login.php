@@ -4,7 +4,7 @@
 	</div>
 
 	<div>
-		<form action="<?php echo base_url(); ?>index.php/Login" method="POST">
+		<form action="<?php echo base_url(); ?>index.php/Login/login" method="POST">
 			<input type="text" placeholder="Username" name="username" id="username" />
 			<input type="text" placeholder="Password" name="password" id="password" />
 

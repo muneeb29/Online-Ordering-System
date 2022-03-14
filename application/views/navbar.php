@@ -36,7 +36,7 @@
 						<div class="dropdown-menu">
 							<a href="<?php echo base_url(); ?>index.php/Register" class="dropdown-item">Sign Up</a>
 							<a href="<?php echo base_url(); ?>index.php/Login" class="dropdown-item">Login</a>
-							<a href="<?php echo base_url(); ?>index.php/Logout" class="dropdown-item">Log Out</a>
+							<a href="<?php echo base_url(); ?>index.php/Login/Logout" class="dropdown-item">Log Out</a>
 							<div class="dropdown-divider"></div>
 							<a href="<?php echo base_url(); ?>index.php/Account" class="dropdown-item">View Account</a>
 						</div>
