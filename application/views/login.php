@@ -5,8 +5,8 @@
 
 	<div>
 		<form action="<?php echo base_url(); ?>index.php/Login" method="POST">
-			<input type="text" placeholder="Username" name="" id="" />
-			<input type="text" placeholder="Password" name="" id="" />
+			<input type="text" placeholder="Username" name="username" id="username" />
+			<input type="text" placeholder="Password" name="password" id="password" />
 
 			<input type="submit" value="Login" />
 		</form>

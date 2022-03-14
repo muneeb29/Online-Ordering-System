@@ -4,16 +4,16 @@
 	</div>
 
 	<div>
-		<form action="<?php echo base_url(); ?>index.php/Register" method="POST">
-			<input type="text" placeholder="First Name:" name="" id="" />
-			<input type="text" placeholder="Surname" name="" id="" />
-			<input type="text" placeholder="Address" name="" id="" />
-			<input type="text" placeholder="Telephone" name="" id="" />
-			<input type="text" placeholder="Email" name="" id="" />
-			<input type="text" placeholder="Username" name="" id="" />
-			<input type="text" placeholder="Password" name="" id="" />
+		<form action="register" method="POST">
+			<input type="text" placeholder="First Name:" name="firstname" id="firstname" />
+			<input type="text" placeholder="Surname" name="surname" id="surname" />
+			<input type="text" placeholder="Address" name="address" id="address" />
+			<input type="text" placeholder="Telephone" name="telephone" id="telephone" />
+			<input type="text" placeholder="Email" name="email" id="email" />
+			<input type="text" placeholder="Username" name="username" id="username" />
+			<input type="text" placeholder="Password" name="password" id="password" />
 
-			<input type="submit" value="Register" />
+			<input type="submit" value="Register" name="submit"/>
 		</form>
 	</div>
 </div>
