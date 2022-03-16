@@ -89,6 +89,7 @@ foreach ($starter as $allitems) {
 	"<td>".'<select name="addc">'
 	.'<option value="" disabled="disabled" selected="selected"> '.'</option>'
 	.'<option value='."$menuid".'>'."$menuid".'</option>'.
+	"<td>".'<input type="submit" class="btn btn-primary" name="add" value="Add">'."</td>".
     "<tr>";
 
   }
@@ -130,6 +131,6 @@ echo "</table></body></html>";
 			</div>
 		</div>
 	</div>
-	<input type="submit" name="add" value="Add">
+	<input type="submit" name="adds" value="Add">
 </form>
 </html>
