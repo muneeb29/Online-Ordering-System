@@ -63,13 +63,31 @@ CREATE TABLE `menu` (
 
 -- Insert into Menu Table
 INSERT INTO `menu` (`menuid`, `name`, `quantity`, `price`,`type`) VALUES
-(1, 'chips', '50', '03.00', 'starter'),
-(2, 'pizza', '50', '10.00', 'main'),
-(3, 'cake', '50', '15.00', 'dessert'),
-(4, 'water', '50', '02.00', 'drinks'),
-(5, 'Garlic Bread', '50', '10.00', 'starter'),
-(6, 'lasagne', '50', '10.00', 'main'),
-(7, 'Fanta', '50', '01.00', 'drinks');
+(1, 'Chips', '50', '03.00', 'starter'),
+(2, 'Salad', '50', '02.50', 'starter'),
+(3, 'Chicken Wings', '50', '04.50', 'starter'),
+(4, 'Chicken Soup', '50', '03.00', 'starter'),
+(5, 'Nachos', '50', '03.00', 'starter'),
+(6, 'Garlic Bread', '50', '6.00', 'starter'),
+(7, 'Pizza', '50', '10.00', 'main'),
+(8, 'Lasagne', '50', '10.00', 'main'),
+(9, 'Pasta', '50', '12.00', 'main'),
+(10, 'Chicken Burger', '50', '05.50', 'main'),
+(11, 'Egg Noodles', '50', '07.00', 'main'),
+(12, 'Lamb Steak', '50', '15.00', 'main'),
+(13, 'Apple Pie', '50', '03.00', 'dessert'),
+(14, 'Ice Cream', '50', '02.50', 'dessert'),
+(15, 'Doughnuts', '50', '03.00', 'dessert'),
+(16, 'Cheesecake', '50', '12.00', 'dessert'),
+(17, 'Carrotcake', '50', '12.00', 'dessert'),
+(18, 'Brownies', '50', '08.00', 'dessert'),
+(19, 'Water', '50', '01.50', 'drinks'),
+(20, 'Rubicon Mango', '50', '02.00', 'drinks'),
+(21, 'Sprite', '50', '02.00', 'drinks'),
+(22, 'Tea', '50', '03.50', 'drinks'),
+(23, 'Coffee', '50', '03.50', 'drinks'),
+(24, 'Coca Cola', '50', '02.00', 'drinks'),
+(25, 'Fanta', '50', '01.00', 'drinks');
 
 
 
