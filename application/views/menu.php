@@ -33,6 +33,7 @@
 		</div>
 
 		<div class="container bg-">
+		<form method="post" action="menu"> 
 
 <?php
 $heading = $this->input->cookie('ID',TRUE);
@@ -44,7 +45,7 @@ echo <<<_END
 <body>
 <table cellpadding="4" cellspacing="2" border="1" id="table">
 	<tr>
-		<th>Starters</th> <th>Price</th> <th>Main</th> <th>Dessert</th> <th>Drinks</th> 
+		<th>Starters</th> <th>Price</th>  <th>Quantity</th>  <th>Main</th> <th>Dessert</th> <th>Drinks</th> 
 	</tr>
 _END;
 
@@ -73,10 +74,21 @@ else if($type != null){
 
 else{
 foreach ($starter as $allitems) {
+	$menuid = $allitems->menuid;
     echo 
     "<tr>".
     "<td>".''.$allitems->name.''."</td>".
 	"<td>".''.$allitems->price.''."</td>".
+	"<td>".'<select name="quantity">'
+	.'<option value="" disabled="disabled" selected="selected"> '.'</option>'
+	.'<option value="1">1</option>'
+	.'<option value="2">2</option>'
+	.'<option value="3">3</option>'
+	.'<option value="4">4</option>'
+	.'</select>'."<br/>"."</td>".
+	"<td>".'<select name="addc">'
+	.'<option value="" disabled="disabled" selected="selected"> '.'</option>'
+	.'<option value='."$menuid".'>'."$menuid".'</option>'.
     "<tr>";
 
   }
@@ -118,4 +130,6 @@ echo "</table></body></html>";
 			</div>
 		</div>
 	</div>
+	<input type="submit" name="add" value="Add">
+</form>
 </html>

@@ -65,6 +65,18 @@
             return $data;
         }
 
+        public function add($addCart,$quantity){
+            $orderid = "3";
+            $data = array(
+                'orderid' => $orderid,
+                'menuid' => $addCart,
+                'quantity' => $quantity,
+      
+            );
+
+            $id = $this->db->insert('order_menu',$data);
+        }
+
 			
 
          

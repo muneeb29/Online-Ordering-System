@@ -44,5 +44,18 @@ class Menu extends CI_Controller {
 		
 
 		$this->load->view('menu',$data);
+
+		$this->add();
+	}
+
+	public function add(){
+		$addCart =  $this->input->post('addc');
+		$quantity =  $this->input->post('quantity');
+
+		if($this->input->post('add')){
+			$data['updateAll'] = $this->Menu_model->add($addCart, $quantity);
+
+	
+			}
 	}
 }
