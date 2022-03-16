@@ -44,7 +44,7 @@ echo <<<_END
 <body>
 <table cellpadding="4" cellspacing="2" border="1" id="table">
 	<tr>
-		<th>Starters</th><th>Main</th> <th>Dessert</th> <th>Drinks</th> 
+		<th>Starters</th> <th>Price</th> <th>Main</th> <th>Dessert</th> <th>Drinks</th> 
 	</tr>
 _END;
 
@@ -53,6 +53,7 @@ if($types != null){
 		echo 
 		"<tr>".
 		"<td>".''.$items->name.''."</td>".
+		"<td>".''.$items->price.''."</td>".
 		"<tr>";
 	
 	  }
@@ -64,6 +65,7 @@ else if($type != null){
 		echo 
 		"<tr>".
 		"<td>".''.$item->name.''."</td>".
+		"<td>".''.$item->price.''."</td>".
 		"<tr>";
 	
 	  }
@@ -74,6 +76,7 @@ foreach ($starter as $allitems) {
     echo 
     "<tr>".
     "<td>".''.$allitems->name.''."</td>".
+	"<td>".''.$allitems->price.''."</td>".
     "<tr>";
 
   }
@@ -81,6 +84,7 @@ foreach ($starter as $allitems) {
     echo 
     "<tr>".
     "<td>".''.$allitems->name.''."</td>".
+	"<td>".''.$allitems->price.''."</td>".
     "<tr>";
 
   }
@@ -88,6 +92,7 @@ foreach ($starter as $allitems) {
     echo 
     "<tr>".
     "<td>".''.$allitems->name.''."</td>".
+	"<td>".''.$allitems->price.''."</td>".
     "</tr>";
 
   }    
@@ -96,6 +101,7 @@ foreach ($starter as $allitems) {
     echo 
     "<tr>".
     "<td>".''.$allitems->name.''."</td>".
+	"<td>".''.$allitems->price.''."</td>".
     "<tr>";
 
   }    

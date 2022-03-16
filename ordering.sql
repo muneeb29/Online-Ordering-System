@@ -26,7 +26,7 @@ INSERT INTO `customer` ( `customerid`, `firstname`, `surname`, `address`, `telep
 CREATE TABLE `orders` (
   `orderid` int(11) NOT NULL,
   `customerid` int(11) NOT NULL,
-  `total` decimal(2) NOT NULL
+  `total` decimal(6,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- Payment Table
@@ -38,7 +38,7 @@ CREATE TABLE `payment` (
   `card_num` int(11) NOT NULL,
   `csv` int(11) NOT NULL,
   `exp_date` date NOT NULL,
-  `amount` int(11) NOT NULL,
+  `amount` decimal(6,2) NOT NULL,
   `type` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -49,7 +49,7 @@ CREATE TABLE `order_menu` (
   `orderid` int(11) NOT NULL,
   `menuid` int(11) NOT NULL,
   `quantity` int(11) NOT NULL,
-  `price` decimal(2) NOT NULL
+  `price` decimal(6,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- Menu table
@@ -57,7 +57,7 @@ CREATE TABLE `menu` (
   `menuid` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `quantity` int(11) NOT NULL,
-  `price` decimal(2) NOT NULL,
+  `price` decimal(6,2) NOT NULL,
   `type` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
