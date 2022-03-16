@@ -5,7 +5,7 @@
             $this->load->database();
         }
 
-        public function getUser($password)
+        public function getUser($pass)
         {
         $data='';
       
@@ -25,7 +25,7 @@
                 'telephone'=> $telephone,
                 'email'=> $email,
                 'type' => $type,
-                'password' => $password,
+                'password' => $pass,
             
             );
 

@@ -6,7 +6,7 @@
 
 		}
 
-        public function login($username, $password){
+        public function login($username, $pass){
 
 			$this->db->select("*");
 
@@ -14,7 +14,7 @@
 
             $this->db->where('username',$username);
 
-            $this->db->where('Password',$password);
+            $this->db->where('Password',$pass);
 			$query = $this->db->get(); 
             return $query->row_array();
         }

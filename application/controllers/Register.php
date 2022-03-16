@@ -28,11 +28,11 @@ class Register extends CI_Controller {
 	public function signedup(){
 
 		$password = $this->input->post('password');
-		
+		$pass = sha1($password);
 		$data = array();
 
 		if($this->input->post('submit')){
-			$data['AllUsers'] = $this->Signup_model->getUser($password);
+			$data['AllUsers'] = $this->Signup_model->getUser($pass);
 			redirect('login');
 		}
 		$this->load->view('register',$data);
