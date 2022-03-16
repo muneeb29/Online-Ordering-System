@@ -35,7 +35,7 @@
 					</div>
 
 					<div class="d-grid">
-					<input type="submit" value="Login" class="btn btn-primary fw-bold" />
+					<input type="submit" value="Login" class="btn btn-primary" />
 				</div>
 				</form>
 				</div>

@@ -86,7 +86,7 @@
 					</div>
 
 					<div class="d-grid">
-					<input type="submit" value="Register" name="submit" class="btn btn-primary fw-bold" />
+					<input type="submit" value="Register" name="submit" class="btn btn-primary" />
 				</div>
 				</form>
 				</div>

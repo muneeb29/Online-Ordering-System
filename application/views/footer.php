@@ -43,7 +43,7 @@
 				</ul>
 			</div>
 			<div class="col col-md-3">
-				<a href="<?php echo base_url(); ?>index.php/Home">Menu</a>
+				<a href="<?php echo base_url(); ?>index.php/Contact">Contact Us</a>
 			</div>
 		</div>
 

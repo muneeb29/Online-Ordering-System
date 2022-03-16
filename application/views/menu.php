@@ -4,21 +4,25 @@
 			<div class="row">
 				<div class="col">
 					<form action="Menu" method="POST">
-					<select name="dropType" id="">
+					<div class="input-group mb-3">
+					<select name="dropType" id="" class="form-select-sm">
 						<option value="" disabled selected>Select One</option>
 						<option value="starter">Starters</option>
 						<option value="main">Main Course</option>
 						<option value="dessert">Dessert</option>
 						<option value="drinks">Drinks</option>
 					</select>
-					<input type="submit" value="Search">
+					<input type="submit" value="Search" class="btn btn-primary">
+					</div>
 				</form>
 				</div>
 
-				<div class="col text-end">
+				<div class="col-auto text-end">
 					<form action="Menu" method="POST">
-						<input type="text" placeholder="Search Menu" name="searchMenu" />
-						<input type="Submit" value="Search" />
+						<div class="input-group mb-3">
+						<input type="text" placeholder="Search Menu" name="searchMenu" class="form-control"/>
+						<input type="Submit" value="Search" class="btn btn-primary "/>
+						</div>
 					</form>
 				</div>
 			</div>
