@@ -17,6 +17,9 @@ class Login extends CI_Controller {
 		if($this->session->userdata('user')){
 			redirect('home');
 		}
+		else if($this->session->userdata('admin')){
+			redirect('dashboard');
+		}
 
 		else{
 			$this->layout();
@@ -35,8 +38,17 @@ class Login extends CI_Controller {
         $password = $this->input->post('password',true);
 
 		$data = $this->Login_model->login($username, $password);
-		
-		if($data){
+		$admin = $this->Login_model->checkAdmin($username, $password);
+
+		if($admin){
+			$this->session->set_userdata('admin', $admin);
+			$session_id=$this->session->session_id;
+			set_cookie('admin', $session_id, 10000);
+			redirect('adminhome');
+			
+		}
+
+		else if($data){
 			$this->session->set_userdata('user', $data);
 
 			$session_id=$this->session->session_id;
@@ -51,10 +63,29 @@ class Login extends CI_Controller {
 		} 
 	}
 
+		public function adminhome(){
+			if($this->session->userdata('admin')){
+				redirect('dashboard');
+			}
+			else{
+				redirect('login');
+			}
+	 
+		}
+	
+
 	public function logout(){
 
 		$this->session->unset_userdata('user');
 		delete_cookie('user');
+		$this->load->view('navbar');
+		$this->load->view('logout');
+		$this->load->view('footer');
+	}
+
+	public function adminlogout(){
+		$this->session->unset_userdata('admin');
+		delete_cookie('admin');
 		$this->load->view('navbar');
 		$this->load->view('logout');
 		$this->load->view('footer');

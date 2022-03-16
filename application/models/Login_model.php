@@ -18,6 +18,12 @@
 			$query = $this->db->get(); 
             return $query->row_array();
         }
+
+		public function checkAdmin($username, $password){
+
+			$query = $this->db->get_where('customer', array('username'=>$username, 'password'=>$password, 'type'=>'admin' ));
+			return $query->row_array();
+		}
 			
 
          

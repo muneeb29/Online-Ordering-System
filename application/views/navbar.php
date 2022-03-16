@@ -53,6 +53,23 @@
 								class="dropdown-item"
 								>View Account</a
 							>
+
+
+
+					<?php
+							elseif($this->session->userdata('admin')) :  ?>
+							<a
+								href="<?php echo base_url(); ?>index.php/Login/adminlogout"
+								class="dropdown-item"
+								>Log Out</a
+							>
+							<div class="dropdown-divider"></div>
+							<a
+								href="<?php echo base_url(); ?>index.php/Dashboard"
+								class="dropdown-item"
+								>Dashboard</a
+							>
+
 							<?php else : ?>
 
 							<a
@@ -65,9 +82,11 @@
 								class="dropdown-item"
 								>Login</a
 							>
-						</div>
-					</li>
+							</div>
+							</li>
+					
 					<?php endif;?>
+
 					<li class="nav-item">
 						<a
 							class="nav-link"
