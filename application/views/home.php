@@ -1,6 +1,6 @@
 <html>
 
-	<div class="container border border-3 my-3 text-center rounded">
+	<div class="container border border-1 my-3 text-center rounded shadow">
 		<h1>Order Online</h1>
 		<div class="d-grid gap-2 col-6 mx-auto mb-2">
 			<a
