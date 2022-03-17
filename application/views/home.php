@@ -1,5 +1,4 @@
 <html>
-
 	<div class="container border border-1 my-3 text-center rounded shadow">
 		<h1>Order Online</h1>
 		<div class="d-grid gap-2 col-6 mx-auto mb-2">
@@ -13,6 +12,11 @@
 	</div>
 
 	<div class="text-center">
-		<img src="<?php echo base_url(); ?>application/images/burgern.jpeg" alt="burger image" style="size: auto" />
+		<img
+			src="<?php echo base_url(); ?>application/images/burgern.jpeg"
+			alt="burger image"
+			style="size: auto"
+			class="rounded"
+		/>
 	</div>
 </html>

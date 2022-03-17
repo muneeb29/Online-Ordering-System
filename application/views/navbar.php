@@ -6,13 +6,25 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
 	<body>
-		<div class="container rounded text-center my-3">
-			<h1>Online Food Ordering</h1>
+		<div class="row">
+			<div class="col rounded text-center my-3 bg-light border">
+				<h1 class="">Online Food Ordering</h1>
+			</div>
 		</div>
 
 		<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 			<div class="container-fluid">
 				<ul class="navbar-nav">
+					<li class="navbar-brand">
+						<img
+						src="<?php echo base_url(); ?>application/images/logo.svg"
+							class="img-fluid"
+							alt="Icon"
+							width="35"
+							height="30"
+						/>
+					</li>
+
 					<li class="nav-item">
 						<a class="nav-link" href="<?php echo base_url(); ?>index.php/Home"
 							>Home</a
@@ -54,10 +66,8 @@
 								>View Account</a
 							>
 
-
-
-					<?php
-							elseif($this->session->userdata('admin')) :  ?>
+							<?php
+							elseif($this->session->userdata('admin')) : ?>
 							<a
 								href="<?php echo base_url(); ?>index.php/Login/adminlogout"
 								class="dropdown-item"
@@ -82,9 +92,9 @@
 								class="dropdown-item"
 								>Login</a
 							>
-							</div>
-							</li>
-					
+						</div>
+					</li>
+
 					<?php endif;?>
 
 					<li class="nav-item">
