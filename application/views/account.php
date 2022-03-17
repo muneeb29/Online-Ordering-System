@@ -13,30 +13,62 @@ echo <<<_END
 	<h1 class="text-capitalize">User Details</h1>
 </head>
 <body>
-<table cellpadding="4" cellspacing="2" border="1" id="table">
-	<tr>
-		<th>Name</th>
-	</tr>
 _END;
 
 
 	foreach ($details as $items) {
 		echo 
-		"<tr>".
-		"<td>".''.$items->firstname.''."</td>".
-		"<tr>".
-		"<td>".''.$items->surname.''."</td>".
-		"<tr>".
-		"<td>".''.$items->firstname.''."</td>".
-		"<tr>".
-		"<td>".''.$items->address.''."</td>".
-		"<tr>".
-		"<td>".''.$items->telephone.''."</td>".
-		"<tr>".
-		"<td>".''.$items->email.''."</td>".
-		"<tr>".
-		"<td>".''.$items->username.''."</td>".
-		"<tr>";
+		
+		
+		'<div class="container">',
+		'<div class="row">',
+		'<div class="col-lg-5 mx-auto">',
+		'<div class="border-1 shadow rounded my-5">',
+		'<div class="p-5">',
+		'	<div class="text-center">
+		<h4 class="mb-4 fs-4">Update Details</h4>
+	</div>',
+		'	<form
+		action="Account"
+		method="POST"
+	>',
+		'<div class="form-floating mb-3">
+		<input type="text" name="firstname" class="form-control" placeholder ="'.$items->firstname.'">
+		<label for="firstname">First Name: '.$items->firstname.'</label/>
+		</div>',
+		
+		'<div class="form-floating mb-3">
+		<input type="text" name="surname" class="form-control" placeholder ="'.$items->surname.'">
+		<label for="surname">Surname: '.$items->surname.'</label/>
+		</div>',
+		
+		'<div class="form-floating mb-3">
+		<input type="text" name="address" class="form-control" placeholder ="'.$items->address.'">
+		<label for="address">Address: '.$items->address.'</label/>
+		</div>',
+
+		'<div class="form-floating mb-3">
+		<input type="text" name="telephone" class="form-control" placeholder ="'.$items->telephone.'">
+		<label for="telephone">Telephone: '.$items->telephone.'</label/>
+		</div>',
+		
+		'<div class="form-floating mb-3">
+		<input type="text" name="email" class="form-control" placeholder ="'.$items->email.'">
+		<label for="email">Email: '.$items->email.'</label/>
+		</div>',
+	
+
+		'<div class="d-grid">
+		<input type="submit" name="Update" value="Update" class="btn btn-primary mb-2">
+		</div>',
+
+		'</form>',
+		'</div>',
+		'</div>',
+		'</div>',
+
+		'</div>';
+		
 	
 	  }
 

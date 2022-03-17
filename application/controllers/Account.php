@@ -17,6 +17,7 @@ class Account extends CI_Controller {
 		$this->load->view('navbar');
 		$this->accountDetails();
 		$this->load->view('footer');
+		$this->updateDetails();
 	}
 
 	public function accountDetails(){
@@ -27,5 +28,15 @@ class Account extends CI_Controller {
 		$data['details'] = $this->Account_model->details($customerid);	
 
 		$this->load->view('account',$data);
+	}
+
+	public function updateDetails(){
+
+		if($this->input->post('Update')){
+			$customerid = $this->Account_model->getCustID();
+			$data['update'] = $this->Account_model->updateAccount($customerid);	
+	
+			}
+
 	}
 }

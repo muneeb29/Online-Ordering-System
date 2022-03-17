@@ -34,6 +34,30 @@
                 return $data;
             
         }
+
+        public function updateAccount($customerid){     
+                $firstname =  $this->input->post('firstname');
+                $surname =  $this->input->post('surname');
+                $address =  $this->input->post('address');
+                $telephone =  $this->input->post('telephone');
+                $email =  $this->input->post('email');
+                
+                $data = array(
+                        'firstname' => $firstname,
+                        'surname' => $surname,
+                        'address'=> $address,
+                        'telephone'=> $telephone,
+                        'email'=> $email,
+                    
+                    );
+            
+                $this->db->where('customerid', $customerid);
+                $this->db->update('customer',$data);
+                return $data;
+            
+        }
+
+
 			
 
          
