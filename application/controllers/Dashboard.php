@@ -37,7 +37,28 @@ class Dashboard extends CI_Controller {
 	}
 
 	public function editMenu(){
-		$data['menu'] = $this->Admin_model->menuItems();
+
+		$data = array();
+
+		if($this->input->post('selectName')){
+			$data['find'] = $this->Admin_model->selectItems();
+			}
+
+		$menuid = $this->Admin_model->selectItems();
+		set_cookie('menu', $menuid, 10);
+
+		$data['menu'] = $this->Admin_model->menuItems($menuid);
+
+		$data['mnu'] = $this->Admin_model->allItems();
+
+		if($this->input->post('addItems')){
+		$data['add'] = $this->Admin_model->addItems();
+		}
+
+		if($this->input->post('update')){
+		$menuid = $this->input->cookie('menu',TRUE);
+		$data['updated'] = $this->Admin_model->updateItems($menuid);
+			}
 		
 		$this->load->view('dashboard',$data);
 		
