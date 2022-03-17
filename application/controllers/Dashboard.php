@@ -10,7 +10,7 @@ class Dashboard extends CI_Controller {
 		$this->load->database();
 		$this->load->helper('html');
 		$this->load->helper('cookie');
-		$this->load->model('Menu_model');
+		$this->load->model('Admin_model');
 	}
 
 	public function index()
@@ -20,6 +20,7 @@ class Dashboard extends CI_Controller {
 		}
 		else if($this->session->userdata('admin')){
 			$this->dashboard(); 
+			
 		}
 
 		else{
@@ -31,8 +32,15 @@ class Dashboard extends CI_Controller {
 
     public function dashboard(){
 		$this->load->view('navbar');
-		$this->load->view('dashboard');
+		$this->editMenu(); 
 		$this->load->view('footer');
+	}
+
+	public function editMenu(){
+		$data['menu'] = $this->Admin_model->menuItems();
+		
+		$this->load->view('dashboard',$data);
+		
 	}
 
 }
