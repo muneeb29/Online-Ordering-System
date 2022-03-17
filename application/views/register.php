@@ -1,5 +1,6 @@
 <div>
-	<div class="container bg-primary text-center rounded my-3">
+
+<div class="container bg-white border-1 shadow rounded text-center my-4 py-1">
 		<h1>Sign Up</h1>
 	</div>
 

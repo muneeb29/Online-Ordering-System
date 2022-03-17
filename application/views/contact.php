@@ -1,6 +1,6 @@
 <html>
-	<div>
-		<div class="container bg-primary text-center my-3 rounded">
+	<div>		
+		<div class="container bg-white border-1 shadow rounded text-center my-4 py-1">
 			<h1>Contact Us</h1>
 		</div>
 

@@ -49,6 +49,7 @@
             $this->db->select("*");
             $this->db->from('menu');
             $this->db->where('type', $type);
+            $this->db->or_where('name', $type);
             $query = $this->db->get(); 
             $data = $query->result();
             return $data;
@@ -76,9 +77,6 @@
 
             $id = $this->db->insert('order_menu',$data);
         }
-
-			
-
-         
 	}
+
     ?>

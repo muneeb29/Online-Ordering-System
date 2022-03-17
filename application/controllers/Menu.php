@@ -42,7 +42,7 @@ class Menu extends CI_Controller {
 
 		$data['types'] = $this->Menu_model->menuItems($dropType);
 		
-
+		$this->load->view('menu_options',$data);
 		$this->load->view('menu',$data);
 
 		$this->add();
