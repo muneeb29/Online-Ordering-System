@@ -41,6 +41,20 @@
 			<input type="submit" name="selectName" value="Search" class="btn btn-primary">
 			</form>
 
+			<form action="dashboard" method="POST">
+		<select class="" name="deleteItems"> 
+			<option disabled selected value="">Select One</option>
+            <?php 
+            foreach($mnu as $row)
+            { 
+              echo 
+			  '<option value="'.$row->name.'">'.$row->name.'</option>';
+            }
+            ?>
+            </select>
+			<input type="submit" name="deleteName" value="Delete" class="btn btn-primary">
+			</form>
+
 		<?php
 		echo <<<_END
 		<html>

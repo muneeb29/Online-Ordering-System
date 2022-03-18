@@ -59,6 +59,10 @@ class Dashboard extends CI_Controller {
 		$menuid = $this->input->cookie('menu',TRUE);
 		$data['updated'] = $this->Admin_model->updateItems($menuid);
 			}
+
+		if($this->input->post('deleteName')){
+			$data['delete'] = $this->Admin_model->deleteItems();
+					}	
 		
 		$this->load->view('dashboard',$data);
 		

@@ -76,6 +76,13 @@
             return $data;
         }
 
+        public function deleteItems(){
+            $name = $this->input->post('deleteItems');
+
+            $this->db->where('name', $name);
+            $this->db->delete('menu');
+        }
+
  
 			
 
