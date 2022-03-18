@@ -135,8 +135,8 @@ ALTER TABLE `orders`
   ADD FOREIGN KEY (`customerid`) REFERENCES customer(`customerid`);
 
 ALTER TABLE `order_menu`
-  ADD FOREIGN KEY (`orderid`) REFERENCES orders(`orderid`),
-  ADD FOREIGN KEY (`menuid`) REFERENCES menu(`menuid`);
+  ADD FOREIGN KEY (`orderid`) REFERENCES orders(`orderid`);
+
 
 
 
