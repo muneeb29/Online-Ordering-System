@@ -1,8 +1,13 @@
 <html>
+<link rel="stylesheet" href="<?php echo base_url('application/styles/stylesheet.css')?>"/>
 	<link
 		href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
 		rel="stylesheet"
 	/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	
+	<script src="<?php echo base_url('application/scripts/js-script.js');?>">
+		<script src="<?php echo base_url('application/scripts/ajax-functions.js');?>">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
 	<body>

@@ -1,4 +1,14 @@
 <html>
+	<div class="top-scroll  text-end">
+		<button
+			onclick="Scrolltop()"
+			class="btn btn-primary scroll-top"
+			id="topBN"
+		>
+			Go To Top
+		</button>
+	</div>
+
 	<div class="container-fluid bg-dark text-white my-2">
 		<div class="row text-center">
 			<div class="col py-1">
@@ -59,9 +69,7 @@
 		</div>
 
 		<div class="row">
-			<div class="col text-center">
-				Copyright © 2022
-			</div>
+			<div class="col text-center">Copyright © 2022</div>
 		</div>
 	</div>
 </html>
