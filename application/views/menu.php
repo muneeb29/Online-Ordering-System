@@ -17,13 +17,19 @@
                        <td><?php echo $starter->name;?></td>
                        <td><?php echo $starter->price;?></td>
                        
-                       <td><select id="quantity">   
-                     <option disabled selected value="">Select Quantity</option>
+                       <td>
+                       <?php
+                       echo
+                      ' <select id="'.$starter->quantity.'" class="dpd">'
+                       ?>
+                         <option disabled selected value="">Select Quantity</option>
                       <?php 
-                   for($x = 0; $x <= $quantity; $x++){ 
-                    echo '<option value="'.$x.'">'.$x.'</option>';
-                  }
-                      ?> </select> </td>
+                      for($x = 0; $x <= $quantity; $x++){ 
+                        echo '<option value="'.$x.'">'.$x.'</option>';
+                      }
+                      ?> </select></td> 
+
+
 
                        <td><?php echo '<input type="button" class="btn btn-primary mybtn" id="'.$starter->menuid.'" value="Add">'?></td>
 

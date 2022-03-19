@@ -3,12 +3,18 @@ $(document).on('click', '.mybtn', function(){
     addToCart($abc);
 });
 
+$(document).on('change', '.dpd', function(){
+    $ab = $(this).attr('id');
+   
+    var quantity = $('#quantity option:selected').val();
+    alert(quantity);
+});
+
 function addToCart($abc){
 
     var addID = $abc;
     var quantity = $('#quantity').val();
-    console.log(addID);
-    console.log(quantity);
+    console.log("ID: " + addID + "Quantity: " + quantity);
                 
             jQuery.ajax({
             type: "POST",
