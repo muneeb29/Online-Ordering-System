@@ -50,10 +50,11 @@ class Menu extends CI_Controller {
 
 
 	public function add(){
-		$addCart =  $this->input->post('addID');
+		$addCart =  $this->input->post('menuid');
 		$quantity =  $this->input->post('quantity');
+		$price =  $this->input->post('price');
 
-		$data['updateAll'] = $this->Menu_model->add($addCart, $quantity);
+		$data['updateAll'] = $this->Menu_model->add($addCart, $quantity, $price);
 
 	
 			

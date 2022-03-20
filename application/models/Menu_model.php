@@ -66,12 +66,13 @@
             return $data;
         }
 
-        public function add($addCart,$quantity){
+        public function add($addCart,$quantity, $price){
             $orderid = "3";
             $data = array(
                 'orderid' => $orderid,
                 'menuid' => $addCart,
                 'quantity' => $quantity,
+                'price' => $price,
       
             );
 

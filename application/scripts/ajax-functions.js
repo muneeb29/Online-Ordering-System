@@ -1,39 +1,35 @@
-$(document).on('click', '.mybtn', function(){
-    $abc = $(this).attr('id');
-    addToCart($abc);
-});
+function addToCart(){
+$('.addCart').click(function(){
+    var name = $(this).data("name");
+    var price = $(this).data("price");
+    var menuid = $(this).data("menu_id");
+    var quantity = $('#' + menuid).val();
 
-$(document).on('change', '.dpd', function(){
-    $ab = $(this).attr('id');
-   
-    var quantity = $('#quantity option:selected').val();
-    alert(quantity);
-});
-
-function addToCart($abc){
-
-    var addID = $abc;
-    var quantity = $('#quantity').val();
-    console.log("ID: " + addID + "Quantity: " + quantity);
-                
-            jQuery.ajax({
-            type: "POST",
-            url: "Menu/add",
-            dataType: 'html',
-            data: {addID: addID, quantity:quantity},
-            success: function(res) 
-            {
-            alert("Added Item To Cart")      
-            },
-            error:function()
-            {
-            	
-            }
-            });
-        
+    if(quantity != '' && quantity > 0)
+    {
+     $.ajax({
+      url: "Menu/add",
+      method:"POST",
+      data:{name:name, price:price, menuid:menuid, quantity:quantity},
+      success:function(data)
+      {
+       alert("Item Added to Cart");
+      }
+     });
     }
+    else
+    {
+     alert("Please Enter Quantity");
+    }
+
+
+
+ 
+});
+}
+
+
 
 $(document).ready(function() {
     addToCart();
 });
-
