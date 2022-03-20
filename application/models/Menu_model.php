@@ -6,6 +6,25 @@
 
 		}
 
+        public function getOrderID(){
+            $customerid = $this->session->userdata('user');
+            extract($customerid);
+          
+            $this->db->select("orderid");
+            $this->db->from("orders");
+            $this->db->where("customerid = '$customerid'");
+            $query = $this->db->get();
+            $result = $query->result();
+            
+    
+            $orderid='';
+            foreach($result as $o){
+                $orderid = $o->orderid;
+            }
+            return $orderid;
+        
+    }
+
         public function allItems(){
           
             $this->db->select("*");
@@ -66,13 +85,15 @@
             return $data;
         }
 
-        public function add($addCart,$quantity, $price){
-            $orderid = "3";
+        public function add($menuid,$quantity, $price, $orderid, $name){
+           
+            $total = $quantity * $price;
             $data = array(
                 'orderid' => $orderid,
-                'menuid' => $addCart,
+                'menuid' => $menuid,
+                'name' => $name,
                 'quantity' => $quantity,
-                'price' => $price,
+                'price' => $total,
       
             );
 

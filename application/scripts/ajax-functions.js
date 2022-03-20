@@ -20,11 +20,7 @@ $('.addCart').click(function(){
     else
     {
      alert("Please Enter Quantity");
-    }
-
-
-
- 
+    } 
 });
 }
 

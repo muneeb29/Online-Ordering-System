@@ -40,6 +40,7 @@ class Login extends CI_Controller {
 		$pass = sha1($password);
 
 		$data = $this->Login_model->login($username, $pass);
+
 		$admin = $this->Login_model->checkAdmin($username, $password);
 
 		if($admin){
@@ -55,6 +56,9 @@ class Login extends CI_Controller {
 
 			$session_id=$this->session->session_id;
 			set_cookie('user', $session_id, 10000);
+			$customerid = $this->Login_model->getCustID();
+			$data = $this->Login_model->orders($customerid);
+	
 			redirect('home');
 		}
 

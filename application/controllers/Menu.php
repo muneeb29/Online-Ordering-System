@@ -41,6 +41,8 @@ class Menu extends CI_Controller {
 		$data['type'] = $this->Menu_model->menuItems($type);
 
 		$data['types'] = $this->Menu_model->menuItems($dropType);
+
+
 		
 		$this->load->view('menu_options',$data);
 		$this->load->view('menu',$data);
@@ -48,13 +50,15 @@ class Menu extends CI_Controller {
 		
 	}
 
-
 	public function add(){
-		$addCart =  $this->input->post('menuid');
+		$menuid =  $this->input->post('menuid');
 		$quantity =  $this->input->post('quantity');
 		$price =  $this->input->post('price');
+		$name =  $this->input->post('name');
+		$orderid = $this->Menu_model->getOrderID();
 
-		$data['updateAll'] = $this->Menu_model->add($addCart, $quantity, $price);
+
+		$data['updateAll'] = $this->Menu_model->add($menuid, $quantity, $price, $orderid, $name);
 
 	
 			

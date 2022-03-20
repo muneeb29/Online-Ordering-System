@@ -47,6 +47,7 @@ CREATE TABLE `payment` (
 CREATE TABLE `order_menu` (
   `order_menuid` int(11) NOT NULL,
   `orderid` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
   `menuid` int(11) NOT NULL,
   `quantity` int(11) NOT NULL,
   `price` decimal(6,2) NOT NULL
