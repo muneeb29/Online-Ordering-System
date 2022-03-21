@@ -5,8 +5,7 @@
          <tr>
              <th>Item</th>
              <th>Price</th>
-             <th>Quantity</th>
-             <th>MenuID</th>
+             <th>Quantity</th>         
          </tr>
      </thead>
      <tbody>
@@ -43,8 +42,6 @@
 
                      </tr>
            <?php } ?>
-
-
 
          <?php 
          else : 
