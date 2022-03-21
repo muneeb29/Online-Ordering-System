@@ -1,3 +1,4 @@
+<div>
 <div class="text-center"> 
 <table class="mx-auto" cellpadding="4" cellspacing="2" border="1" id="table">
     <thead>
@@ -108,6 +109,15 @@
            <?php } ?>
            <?php endif;?>
      </tbody>
-
 </table>
+</div>
+
+<div class="d-grid col-6 mx-auto mb-2 my-2">
+<a
+				href="<?php echo base_url(); ?>index.php/checkout"
+				role="button"
+				class="btn btn-primary btn-large"
+				>Checkout</a
+			>
+</div>
 </div>
