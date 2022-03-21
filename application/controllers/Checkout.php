@@ -22,8 +22,15 @@ class Checkout extends CI_Controller {
 
 	public function getOrder(){
 		$orderID = $this->Checkout_model->getOrderID();
+		
 		$data['order'] = $this->Checkout_model->getOrder($orderID);
 		$data['total'] = $this->Checkout_model->total($orderID);
+
+		$data['to'] = $this->Checkout_model->totalOrder($orderID);
+		$total = $this->Checkout_model->totalOrder($orderID);
+
+		$data['update'] = $this->Checkout_model->updateOrder($orderID, $total);
+
 		$this->load->view('checkout',$data);
 	}
 }
