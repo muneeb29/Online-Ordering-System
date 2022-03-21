@@ -21,6 +21,18 @@ class Payment extends CI_Controller {
 	}
 
 	public function getPayment(){
+		$orderID = $this->Payment_model->getOrderID();
+		$custID = $this->Payment_model->getCustID();
+		$data['total'] = $this->Payment_model->totalOrder($orderID);
+		$total = $this->Payment_model->totalOrder($orderID);
+
+		if($this->input->post('pay')){
+			$data['paid'] = $this->Payment_model->payment($orderID, $custID, $total);
+			
+		}
+
 		$this->load->view('payment');
 	}
 }
+
+
