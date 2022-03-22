@@ -6,7 +6,7 @@
 
 		}
 
-        public function login($username, $pass){
+        public function login($username, $password){
 
 			$this->db->select("*");
 
@@ -14,9 +14,16 @@
 
             $this->db->where('username',$username);
 
-            $this->db->where('Password',$pass);
+            
 			$query = $this->db->get(); 
-            return $query->row_array();
+            $result =  $query->row_array();
+
+			if (!empty($result) && password_verify($password, $result['password'])) {
+				return $result;
+	
+			} else {
+				return false;
+			}
         }
 
 		public function checkAdmin($username, $password){

@@ -5,8 +5,10 @@
             $this->load->database();
         }
 
-        public function getUser($pass)
-        {
+        public function getUser($pass){
+
+            var_dump($pass);
+
         $data='';
       
             if($this->input->post('submit')){
@@ -38,7 +40,7 @@
             );
 
             $data = array_merge($datai, $datau);   
-            $id = $this->db->insert('customer',$data);
+            $this->db->insert('customer',$data);
 
         }
 

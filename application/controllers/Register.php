@@ -28,7 +28,7 @@ class Register extends CI_Controller {
 	public function signedup(){
 
 		$password = $this->input->post('password');
-		$pass = sha1($password);
+		$pass = password_hash($password, PASSWORD_DEFAULT);
 		$data = array();
 
 		if($this->input->post('submit')){

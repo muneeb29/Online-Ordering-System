@@ -37,9 +37,7 @@ class Login extends CI_Controller {
 		$username = $this->input->post('username',true);
         $password = $this->input->post('password',true);
 
-		$pass = sha1($password);
-
-		$data = $this->Login_model->login($username, $pass);
+		$data = $this->Login_model->login($username, $password);
 
 		$admin = $this->Login_model->checkAdmin($username, $password);
 
