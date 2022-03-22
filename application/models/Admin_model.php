@@ -57,21 +57,51 @@
             return $data;
         }
 
+
+
         public function updateItems($menuid){
-            $updateName = $this->input->post('updateName');
-            $updatePrice = $this->input->post('updatePrice');
-            $updateQuantity = $this->input->post('updateQuantity');
-            $updateType = $this->input->post('updateType');
 
-            $data = array(
-                'name' => $updateName,
-                'price' => $updatePrice,
-                'quantity'=> $updateQuantity,
-                'type'=> $updateType,
-            );
+            $data1 = array();
+            $data2 = array();
+            $data3 = array();
+            $data4 = array();
 
+            if(!empty($this->input->post('updateName'))){
+                $updateName = $this->input->post('updateName');
+                $data1 = array(
+                    'name' => $updateName,
+                );
+            }
+
+            if(!empty($this->input->post('updatePrice'))){
+                $updatePrice = $this->input->post('updatePrice');
+                $data2 = array(
+                    'price' => $updatePrice,
+                );
+            }
+
+            if(!empty($this->input->post('updateQuantity'))){
+                $updateQuantity = $this->input->post('updateQuantity');
+                $data3 = array(
+                    'quantity' => $updateQuantity,
+                );
+            }
+
+            if(!empty($this->input->post('updateType'))){
+                $updateType = $this->input->post('updateType');
+                $data4 = array(
+                    'type' => $updateType,
+                );
+            }
+
+            $data = array_merge($data1,$data2,$data3,$data4);
+     
+            if (empty($data)){
+            }
+            else{
             $this->db->where('menuid', $menuid);
             $this->db->update('menu',$data);
+            }
 
             return $data;
         }
