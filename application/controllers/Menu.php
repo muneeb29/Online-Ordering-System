@@ -24,11 +24,6 @@ class Menu extends CI_Controller {
 	public function menu(){
 		$type =  $this->input->post('searchMenu');
 		$dropType =  $this->input->post('dropType');
-		$all = "All Items";
-		
-		set_cookie('ID', $type, 100);
-		set_cookie('ID', $dropType, 100);
-		set_cookie('ID', $all, 100);
 		
 		$data = array();
 

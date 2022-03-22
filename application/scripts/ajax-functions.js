@@ -3,7 +3,9 @@ function topFunction() {
 	document.documentElement.scrollTop = 0;
 }
 
-
+function empty(){
+    alert("Cart Is Empty")
+}
 
 function addToCart(){
 $('.addCart').click(function(){

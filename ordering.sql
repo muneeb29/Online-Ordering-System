@@ -35,7 +35,7 @@ CREATE TABLE `payment` (
   `paymentid` int(11) NOT NULL,
   `customerid` int(11) NOT NULL,
   `orderid` int(11) NOT NULL,
-  `card_num` int(11) NOT NULL,
+  `card_num` varchar(25) NOT NULL,
   `csv` int(11) NOT NULL,
   `exp_date` date NOT NULL,
   `amount` decimal(6,2) NOT NULL,

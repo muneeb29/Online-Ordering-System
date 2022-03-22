@@ -16,7 +16,7 @@
                     <tr>
                        <td><?php echo $type->name;?></td>
                        <td><?php echo $type->price;?></td>
-                       <td><?php  echo '<input type="text" name="quantity" class="form-control quantity" id="'.$type->menuid.'">';?></td>
+                       <td><?php  echo '<input type="text" name="quantity" placeholder="QTY: 1" class="form-control quantity" id="'.$type->menuid.'">';?></td>
                        <td><?php echo '<input type="button" class="btn btn-primary addCart" name="addCart" value="Add"
                        data-name="'.$type->name.'"
                        data-price="'.$type->price.'"
@@ -34,7 +34,7 @@
                     <tr>
                        <td><?php echo $items->name;?></td>
                        <td><?php echo $items->price;?></td>
-                       <td><?php  echo '<input type="text" name="quantity" class="form-control quantity" id="'.$items->menuid.'">';?></td>
+                       <td><?php  echo '<input type="text" name="quantity"placeholder="QTY: 1" class="form-control quantity" id="'.$items->menuid.'">';?></td>
                        <td><?php echo '<input type="button" class="btn btn-primary addCart" name="addCart" value="Add"
                        data-name="'.$items->name.'"
                        data-price="'.$items->price.'"
@@ -50,7 +50,7 @@
                     <tr>
                        <td><?php echo $starter->name;?></td>
                        <td><?php echo $starter->price;?></td>
-                       <td><?php  echo '<input type="text" name="quantity" class="form-control quantity" id="'.$starter->menuid.'">';?></td>
+                       <td><?php  echo '<input type="text" name="quantity" placeholder="QTY: 1" class="form-control quantity" id="'.$starter->menuid.'">';?></td>
                        <td><?php echo '<input type="button" class="btn btn-primary addCart" name="addCart" value="Add"
                        data-name="'.$starter->name.'"
                        data-price="'.$starter->price.'"
@@ -65,7 +65,7 @@
                     <tr>
                        <td><?php echo $mains->name;?></td>
                        <td><?php echo $mains->price;?></td>
-                       <td><?php  echo '<input type="text" name="quantity" class="form-control quantity" id="'.$mains->menuid.'">';?></td>
+                       <td><?php  echo '<input type="text" name="quantity" placeholder="QTY: 1" class="form-control quantity" id="'.$mains->menuid.'">';?></td>
                        <td><?php echo '<input type="button" class="btn btn-primary addCart" name="addCart" value="Add"
                        data-name="'.$mains->name.'"
                        data-price="'.$mains->price.'"
@@ -80,7 +80,7 @@
                     <tr>
                        <td><?php echo $desserts->name;?></td>
                        <td><?php echo $desserts->price;?></td>
-                       <td><?php  echo '<input type="text" name="quantity" class="form-control quantity" id="'.$desserts->menuid.'">';?></td>
+                       <td><?php  echo '<input type="text" name="quantity" placeholder="QTY: 1" class="form-control quantity" id="'.$desserts->menuid.'">';?></td>
                        <td><?php echo '<input type="button" class="btn btn-primary addCart" name="addCart" value="Add"
                        data-name="'.$desserts->name.'"
                        data-price="'.$desserts->price.'"
@@ -95,7 +95,7 @@
                     <tr>
                        <td><?php echo $drink->name;?></td>
                        <td><?php echo $drink->price;?></td>
-                       <td><?php  echo '<input type="text" name="quantity" class="form-control quantity" id="'.$drink->menuid.'">';?></td>
+                       <td><?php  echo '<input type="text" name="quantity" placeholder="QTY: 1" class="form-control quantity" id="'.$drink->menuid.'">';?></td>
                        <td><?php echo '<input type="button" class="btn btn-primary addCart" name="addCart" value="Add"
                        data-name="'.$drink->name.'"
                        data-price="'.$drink->price.'"

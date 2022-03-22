@@ -63,7 +63,6 @@
 	}
 
 	public function payment($orderID, $custID, $total){
-		var_dump($orderID, $custID, $total);
 
 		$cardName = $this->input->post('cardName');
 		$cardNumber = $this->input->post('cardNumber');
@@ -81,7 +80,7 @@
 			'type' => $cardType,
 		
 		);
-
+		
 		$this->db->insert('payment',$data);
 		
 	}
