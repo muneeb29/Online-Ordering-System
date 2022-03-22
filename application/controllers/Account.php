@@ -35,7 +35,7 @@ class Account extends CI_Controller {
 		if($this->input->post('Update')){
 			$customerid = $this->Account_model->getCustID();
 			$data['update'] = $this->Account_model->updateAccount($customerid);	
-	
+			redirect($this->uri->uri_string());
 			}
 
 	}

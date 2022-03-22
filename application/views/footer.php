@@ -1,13 +1,7 @@
 <html>
-	<div class="top-scroll  text-end">
-		<button
-			onclick="Scrolltop()"
-			class="btn btn-primary scroll-top"
-			id="topBN"
-		>
-			Go To Top
-		</button>
-	</div>
+<div class="scroll text-end mb-3 my-2">
+		<button onclick="topFunction()"  class="btn btn-primary scroll-top" id="topButton">Go to top</button>
+		</div>
 
 	<div class="container-fluid bg-dark text-white my-2">
 		<div class="row text-center">
