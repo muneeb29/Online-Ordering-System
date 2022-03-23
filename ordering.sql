@@ -50,7 +50,8 @@ CREATE TABLE `order_menu` (
   `name` varchar(255) NOT NULL,
   `menuid` int(11) NOT NULL,
   `quantity` int(11) NOT NULL,
-  `price` decimal(6,2) NOT NULL
+  `price` decimal(6,2) NOT NULL,
+  `total` decimal(6,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- Menu table

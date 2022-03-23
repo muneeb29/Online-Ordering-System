@@ -33,8 +33,35 @@ $('.addCart').click(function(){
 });
 }
 
+function updateCart(){
+    $('.quant').click(function(){
+        var menuid = $(this).data("menu_id");
+        var price = $(this).data("price");
+        var quantity = $('#' + menuid).val();
+    
+        if(quantity != '' && quantity > 0)
+        {
+         $.ajax({
+          url: "Checkout/updateQuantity",
+          method:"POST",
+          data:{menuid:menuid, quantity:quantity, price:price},
+          success:function(data)
+          {
+           alert("Item Updated");
+           location.reload(); 
+          }
+         });
+        }
+        else
+        {
+         alert("Please  Quantity");
+        } 
+    });
+    }
+
 
 
 $(document).ready(function() {
     addToCart();
+    updateCart();
 });

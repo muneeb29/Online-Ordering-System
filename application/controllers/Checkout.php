@@ -33,4 +33,16 @@ class Checkout extends CI_Controller {
 
 		$this->load->view('checkout',$data);
 	}
+
+	public function updateQuantity(){
+		$orderID = $this->Checkout_model->getOrderID();
+		$menuid =  $this->input->post('menuid');
+		$quantity =  $this->input->post('quantity');
+		$price =  $this->input->post('price');
+
+		$total = $this->Checkout_model->totalOrder($orderID);
+		$data['qty'] = $this->Checkout_model->updateQuantity($orderID, $menuid, $quantity,$price);
+		
+	}
 }
+

@@ -93,7 +93,8 @@
                 'menuid' => $menuid,
                 'name' => $name,
                 'quantity' => $quantity,
-                'price' => $total,
+                'price' => $price,
+                'total' => $total,
       
             );
 

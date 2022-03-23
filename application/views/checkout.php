@@ -9,6 +9,7 @@
          <tr>
              <th>Item</th>
              <th>Price</th>
+             <th>Total</th>
              <th>Quantity</th>
          </tr>
      </thead>
@@ -19,18 +20,23 @@
                     <tr>
                        <td><?php echo $type->name;?></td>
                        <td><?php echo $type->price;?></td>
+                       <td><?php echo $type->total;?></td>
 					   <td><?php echo $type->quantity;?></td>
-                     </tr>
+                       <td><?php echo '<input type="number" name="qty" id="'.$type->menuid.'" placeholder="'.$type->quantity.'">'?></td>
+                       <td><?php echo '<input type="button" class="btn btn-primary quant" name="quant" value="Update"
+                       data-price="'.$type->price.'"
+                       data-menu_id="'.$type->menuid.'">'?></td>
+                    </tr>
 
            <?php } ?>
 
 		   <?php 
                 foreach($total as $type){
-                    $amount = $type->price;
+                    $amount = $type->total;
                 ?>
                     <tr>      
 					<th>Total</th>
-                       <td><?php echo $type->price;?></td>			   
+                       <td><?php echo $type->total;?></td>			   
                      </tr>
 
            <?php } ?>
@@ -59,5 +65,6 @@
 			>
             </div>        
     <?php endif;?>
+
 </div>
 </html>

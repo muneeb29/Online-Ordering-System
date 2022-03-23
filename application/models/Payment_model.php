@@ -46,7 +46,7 @@
     }
 
 		public function totalOrder($orderID){     
-			$this->db->select_sum("price");
+			$this->db->select_sum("total");
 			$this->db->from("order_menu");
 			$this->db->where("orderid = '$orderID'");
 			$query = $this->db->get();
@@ -55,7 +55,7 @@
 
 			$price='';
 			foreach($result as $o){
-				$price = $o->price;
+				$price = $o->total;
 			}
 			return $price;
 		

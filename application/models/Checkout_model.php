@@ -39,8 +39,10 @@
         return $data; 
 }
 
+
+
     public function total($orderID){
-                $this->db->select_sum('price');
+                $this->db->select_sum('total');
                 $this->db->from('order_menu');
                 $this->db->where('orderid', $orderID);
                 $query = $this->db->get(); 
@@ -49,7 +51,7 @@
     }
 
     public function totalOrder($orderID){     
-        $this->db->select_sum("price");
+        $this->db->select_sum("total");
         $this->db->from("order_menu");
         $this->db->where("orderid = '$orderID'");
         $query = $this->db->get();
@@ -58,12 +60,26 @@
 
         $price='';
         foreach($result as $o){
-            $price = $o->price;
+            $price = $o->total;
         }
         return $price;
     
 
 }
+
+    public function updateQuantity($orderID, $menuid, $quantity, $price){
+       
+       $total = $price * $quantity;
+
+        $data = array(
+            'quantity' => $quantity,
+            'total' => $total,
+        );
+
+        $this->db->where('orderid', $orderID);
+        $this->db->where('menuid', $menuid);
+        $this->db->update('order_menu',$data);
+    }
 
     public function updateOrder($orderID, $total){
         $data = array(
