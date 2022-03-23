@@ -89,4 +89,11 @@
         $this->db->update('orders',$data);
     }
 
+
+    public function deleteProd($order_menuid){
+      
+      echo($order_menuid);
+        $this->db->where('order_menuid', $order_menuid);
+        $this->db->delete('order_menu');
+    }
 }

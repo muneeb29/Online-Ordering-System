@@ -59,9 +59,32 @@ function updateCart(){
     });
     }
 
+    function deleteCart(){
+        $('.dlt').click(function(){
+            var mnuid = $(this).data("menu_id");
+            var order_menuid = $(this).data("order_menuid");
+
+            console.log(order_menuid)
+
+             $.ajax({
+              url: "Checkout/deleteItem",
+              method:"POST",
+              data:{order_menuid:order_menuid},
+              success:function(data)
+              {
+               alert("Item Deleted");
+                 location.reload(); 
+              }
+             });
+            
+
+        });
+        }
+
 
 
 $(document).ready(function() {
     addToCart();
     updateCart();
+    deleteCart();
 });

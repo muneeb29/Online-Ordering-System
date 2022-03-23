@@ -23,9 +23,14 @@
                        <td><?php echo $type->total;?></td>
 					   <td><?php echo $type->quantity;?></td>
                        <td><?php echo '<input type="number" name="qty" id="'.$type->menuid.'" placeholder="'.$type->quantity.'">'?></td>
-                       <td><?php echo '<input type="button" class="btn btn-primary quant" name="quant" value="Update"
+                     
+                     <td><?php echo '<input type="button" class="btn btn-primary quant" name="quant" value="Update"
                        data-price="'.$type->price.'"
                        data-menu_id="'.$type->menuid.'">'?></td>
+                     
+                     <td><?php echo '<input type="button" class="btn btn-primary dlt" name="dlt" value="Remove"
+                      data-order_menuid="'.$type->order_menuid.'"
+                      data-menu_id="'.$type->menuid.'">'?></td>
                     </tr>
 
            <?php } ?>

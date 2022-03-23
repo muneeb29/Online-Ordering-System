@@ -44,5 +44,12 @@ class Checkout extends CI_Controller {
 		$data['qty'] = $this->Checkout_model->updateQuantity($orderID, $menuid, $quantity,$price);
 		
 	}
+
+
+	public function deleteItem(){
+		$order_menuid =  $this->input->post('order_menuid');
+
+		$data['dlte'] = $this->Checkout_model->deleteProd($order_menuid);
+	}
 }
 
