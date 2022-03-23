@@ -46,6 +46,7 @@ class Menu extends CI_Controller {
 	}
 
 	public function add(){
+		if($this->session->userdata('user')){
 		$menuid =  $this->input->post('menuid');
 		$quantity =  $this->input->post('quantity');
 		$price =  $this->input->post('price');
@@ -54,7 +55,12 @@ class Menu extends CI_Controller {
 
 
 		$data['updateAll'] = $this->Menu_model->add($menuid, $quantity, $price, $orderid, $name);
-
+		}
+		else{
+			
+			
+			
+		}
 	
 			
 	}

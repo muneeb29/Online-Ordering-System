@@ -8,6 +8,7 @@
 
         public function getOrderID(){
             $customerid = $this->session->userdata('user');
+            if($customerid !=null){
             extract($customerid);
           
             $this->db->select("orderid");
@@ -22,7 +23,10 @@
                 $orderid = $o->orderid;
             }
             return $orderid;
-        
+            }
+            else {
+                return false;
+            }
 
     }
 

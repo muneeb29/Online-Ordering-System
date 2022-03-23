@@ -38,9 +38,7 @@
 </table>
 </div>
 
-<?php 
-
-if($amount > 0) : ?>
+<?php if($amount > 0) : ?>
 <div class="d-grid col-6 mx-auto mb-2 my-2">
 <a
 				href="<?php echo base_url(); ?>index.php/payment"

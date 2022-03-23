@@ -1,5 +1,5 @@
 <div>
-<div class="text-center"> 
+<div class="text-center my-3"> 
 <table class="mx-auto" cellpadding="4" cellspacing="2" border="1" id="table">
     <thead>
          <tr>
