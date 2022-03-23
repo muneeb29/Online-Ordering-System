@@ -24,6 +24,8 @@
 						placeholder="Search Menu"
 						name="searchMenu"
 						class="form-control"
+						minlength="3"
+						maxlength="17"
 					/>
 					<input type="Submit" value="Search" class="btn btn-primary" />
 				</div>

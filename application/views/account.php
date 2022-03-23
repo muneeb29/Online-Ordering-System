@@ -23,27 +23,31 @@ _END;
 		method="POST"
 	>',
 		'<div class="form-floating mb-3">
-		<input type="text" name="firstname" class="form-control" placeholder ="'.$items->firstname.'">
+		<input type="text" name="firstname" class="form-control" minlength="3"
+		maxlength="10" placeholder ="'.$items->firstname.'">
 		<label for="firstname">First Name: '.$items->firstname.'</label/>
 		</div>',
 		
 		'<div class="form-floating mb-3">
-		<input type="text" name="surname" class="form-control" placeholder ="'.$items->surname.'">
+		<input type="text" name="surname" class="form-control" minlength="3"
+		maxlength="10" placeholder ="'.$items->surname.'">
 		<label for="surname">Surname: '.$items->surname.'</label/>
 		</div>',
 		
 		'<div class="form-floating mb-3">
-		<input type="text" name="address" class="form-control" placeholder ="'.$items->address.'">
+		<input type="text" name="address" class="form-control" minlength="4"
+		maxlength="25" placeholder ="'.$items->address.'">
 		<label for="address">Address: '.$items->address.'</label/>
 		</div>',
 
 		'<div class="form-floating mb-3">
-		<input type="text" name="telephone" class="form-control" placeholder ="'.$items->telephone.'">
+		<input type="tel" name="telephone" class="form-control" minlength="11"
+		maxlength="13" placeholder ="'.$items->telephone.'">
 		<label for="telephone">Telephone: '.$items->telephone.'</label/>
 		</div>',
 		
 		'<div class="form-floating mb-3">
-		<input type="text" name="email" class="form-control" placeholder ="'.$items->email.'">
+		<input type="email" name="email" class="form-control" minlength="3" placeholder ="'.$items->email.'">
 		<label for="email">Email: '.$items->email.'</label/>
 		</div>',
 	

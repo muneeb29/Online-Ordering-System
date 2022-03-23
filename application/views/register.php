@@ -22,6 +22,9 @@
 						class="form-control"
 						placeholder="firstname"
 						name="firstname"
+						minlength="3"
+						maxlength="10"
+						required
 						/>
 						<label for="firstname">Firstname: </label/>
 				</div>
@@ -32,6 +35,9 @@
 						class="form-control"
 						placeholder="surname"
 						name="surname"
+						minlength="3"
+						maxlength="10"
+						required
 						/>
 						<label for="surname">Surname: </label/>
 				</div>
@@ -43,26 +49,34 @@
 						class="form-control"
 						placeholder="address"
 						name="address"
+						minlength="4"
+						maxlength="25"
+						required
 						/>
 						<label for="address">Address: </label/>
 				</div>
 
 				<div class="form-floating mb-3">
 					<input
-						type="text"
+						type="tel"
 						class="form-control"
 						placeholder="telephone"
 						name="telephone"
+						minlength="11"
+						maxlength="13"
+						required
 						/>
 						<label for="telephone">Telephone: </label/>
 				</div>
 
 				<div class="form-floating mb-3">
 					<input
-						type="text"
+						type="email"
 						class="form-control"
 						placeholder="email"
 						name="email"
+						minlength="3"
+						required
 						/>
 						<label for="email">Email: </label/>
 				</div>
@@ -73,6 +87,9 @@
 						class="form-control"
 						placeholder="Username"
 						name="username"
+						minlength="3"
+						maxlength="9"
+						required
 						/>
 						<label for="username">Username: </label/>
 				</div>
@@ -82,6 +99,9 @@
 						class="form-control"
 						placeholder="Password"
 						name="password"
+						minlength="4"
+						maxlength="10"
+						required
 					/>
 					<label for="password">Password: </label/>
 					</div>

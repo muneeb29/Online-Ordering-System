@@ -22,6 +22,9 @@
 						class="form-control"
 						placeholder="Username"
 						name="username"
+						minlength="3"
+						maxlength="9"
+						required
 						/>
 						<label for="username">Username: </label/>
 				</div>
@@ -31,6 +34,9 @@
 						class="form-control"
 						placeholder="Password"
 						name="password"
+						minlength="4"
+						maxlength="10"
+						required
 					/>
 					<label for="password">Password: </label/>
 					</div>

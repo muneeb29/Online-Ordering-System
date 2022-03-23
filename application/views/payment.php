@@ -13,7 +13,7 @@
 		<div class="col-11">
 			<div class="flex-column">
 			<p>Person Name</p>
-			<input type="text" class="form-control mb-3" placeholder="Name" name="cardName">
+			<input type="text" class="form-control mb-3" placeholder="Name" name="cardName" minlength="3" maxlength="25" required>
 			</div>
 			</div>
 		
@@ -21,14 +21,14 @@
 		<div class="col-11">
 			<div class="flex-column">
 			<p class="text mb-2">Card Number</p>
-			<input type="text" class="form-control mb-3" placeholder="Card Number" name="cardNumber">
+			<input type="text" class="form-control mb-3" placeholder="Card Number" name="cardNumber" inputMode="numeric" pattern="[0-9]*" minlength="14" maxlength="16" required>
 			</div>
 			</div>
 
 		<div class="col-6">
 			<div class="flex-column">
 			<p class="text mb-2" >Type</p>
-			<input type="text" class="form-control mb-3" placeholder="Card Type" name="cardType">
+			<input type="text" class="form-control mb-3" placeholder="Card Type" name="cardType" minlength="4" maxlength="12" required>
 			</div>
 			</div>	
 		
@@ -68,7 +68,7 @@
 			<div class="col-6">
 			<div class="flex-column">
 			<p class="text mb-2">CSV</p>
-			<input type="password" class="form-control mb-3" placeholder="***" name="csv">
+			<input type="password" class="form-control mb-3" placeholder = "***" name="csv" inputMode="numeric" pattern="[0-9]*" minlength="3" maxlength="4" required>
 			</div>
 			</div>
 
