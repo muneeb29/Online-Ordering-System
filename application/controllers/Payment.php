@@ -31,16 +31,27 @@ class Payment extends CI_Controller {
 	public function getPayment($orderID, $total){
 		$custID = $this->Payment_model->getCustID();
 		$data['total'] = $this->Payment_model->totalOrder($orderID);
+		$cardNumber = $this->input->post('cardNumber');
+		
+		$cardNumber = $this->maskCard($cardNumber);
+		$cardNumber = chunk_split($cardNumber, 4, ' ');
 
 		if($this->input->post('pay')){
-			$data['paid'] = $this->Payment_model->payment($orderID, $custID, $total);
-			
+			$data['paid'] = $this->Payment_model->payment($orderID, $custID, $total, $cardNumber);
 		}
 
 		$this->load->view('navbar');
 		$this->load->view('payment');
 		$this->load->view('footer');
 	}
+
+
+
+function maskCard($cardNumber){
+	return str_repeat("*",12) . substr($cardNumber, -4);
+}
+
+		
 }
 
 

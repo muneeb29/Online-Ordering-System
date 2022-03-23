@@ -62,13 +62,17 @@
 
 	}
 
-	public function payment($orderID, $custID, $total){
+	public function payment($orderID, $custID, $total, $cardNumber){
 
 		$cardName = $this->input->post('cardName');
-		$cardNumber = $this->input->post('cardNumber');
 		$cardType = $this->input->post('cardType');
-		$expiry = $this->input->post('expiry');
+		$month = $this->input->post('month');
+		$year = $this->input->post('year');
 		$csv = $this->input->post('csv');
+		$day = 01; 
+	
+		$expiryDate = "$year/$month/$day";
+		$expiry = date('Y-m-d', strtotime($expiryDate));
 
 		$data = array(
 			'customerid' => $custID,
