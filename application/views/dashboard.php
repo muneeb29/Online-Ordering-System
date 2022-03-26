@@ -4,7 +4,7 @@
 			class="container bg-white border-1 shadow rounded text-center my-4 py-1"
 		>
 			<h1>Dashboard</h1>
-			<h4>Welcome To The User Dashboard</h4>
+			<h4>Welcome To The Admin Dashboard</h4>
 		</div>
 
 
@@ -62,9 +62,9 @@
 
 	<div class="collapse" id="addItem">
 		<div class="container">
-			<div class="row mx-auto">
-			<div class="col-lg-5">
-			<div class="border-1 shadow">
+			<div class="row ">
+			<div class="col-lg-5 mx-auto">
+			<div class="border-1 shadow rounded my-5">
 			<div class="p-5">
 			<div class="text-center">
 					<h4 class="mb-4 fs-4">Add Item</h4>
@@ -97,7 +97,7 @@
 	</div>
 	</div>
 
-
+<div class="container">
 		<?php
 			foreach ($menu as $items) {
 				echo 	
@@ -148,5 +148,6 @@
 		 "</body></html>";
 		
 		?>
+		</div>
 	</div>
 </html>

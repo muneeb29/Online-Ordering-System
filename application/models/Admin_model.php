@@ -56,6 +56,10 @@
             $id = $this->db->insert('menu',$data);
 
             echo '<script> alert("Item Added!") </script>'; 
+
+            redirect('Dashboard',3000);
+            
+
             return $data;
         }
 

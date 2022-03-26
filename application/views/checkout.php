@@ -22,7 +22,7 @@
                        <td><?php echo $type->price;?></td>
                        <td><?php echo $type->total;?></td>
 					   <td><?php echo $type->quantity;?></td>
-                       <td><?php echo '<input type="number" name="qty" id="'.$type->menuid.'" placeholder="'.$type->quantity.'">'?></td>
+                       <td><?php echo '<input type="number" name="qty" min="1" id="'.$type->menuid.'" placeholder="Update Qty: '.$type->quantity.'">'?></td>
                      
                      <td><?php echo '<input type="button" class="btn btn-primary quant" name="quant" value="Update"
                        data-price="'.$type->price.'"

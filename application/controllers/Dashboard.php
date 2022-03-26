@@ -39,12 +39,14 @@ class Dashboard extends CI_Controller {
 	public function editMenu(){
 
 		$data = array();
+		$menuid = "";
 
 		if($this->input->post('selectName')){
-			$data['find'] = $this->Admin_model->selectItems();
+			
+			$menuid = $this->Admin_model->selectItems();
 			}
 
-		$menuid = $this->Admin_model->selectItems();
+	
 		set_cookie('menu', $menuid, 10);
 
 		$data['menu'] = $this->Admin_model->menuItems($menuid);
@@ -53,6 +55,7 @@ class Dashboard extends CI_Controller {
 
 		if($this->input->post('addItems')){
 		$data['add'] = $this->Admin_model->addItems();
+	
 		}
 
 		if($this->input->post('update')){
@@ -62,6 +65,7 @@ class Dashboard extends CI_Controller {
 
 		if($this->input->post('deleteName')){
 			$data['delete'] = $this->Admin_model->deleteItems();
+			redirect($this->uri->uri_string());
 					}	
 		
 		$this->load->view('dashboard',$data);

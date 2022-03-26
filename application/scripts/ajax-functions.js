@@ -54,7 +54,7 @@ function updateCart(){
         }
         else
         {
-         alert("Please  Quantity");
+         alert("Please Enter Quantity");
         } 
     });
     }
