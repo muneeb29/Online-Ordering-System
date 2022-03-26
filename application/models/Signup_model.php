@@ -7,8 +7,6 @@
 
         public function getUser($pass){
 
-            var_dump($pass);
-
         $data='';
       
             if($this->input->post('submit')){
@@ -46,7 +44,8 @@
 
         else{
          
-            echo '<script>alert("Username already exists!")</script>'; 
+            echo '<script> alert("Username already exists") </script>'; 
+           
             return false;
         }
     }

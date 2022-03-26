@@ -29,13 +29,19 @@ class Register extends CI_Controller {
 
 		$password = $this->input->post('password');
 		$pass = password_hash($password, PASSWORD_DEFAULT);
-		$data = array();
 
 		if($this->input->post('submit')){
-			$data['AllUsers'] = $this->Signup_model->getUser($pass);
-			redirect('login');
+
+			$check = $this->Signup_model->getUser($pass);
+			if($check == false){
+	
+			}
+			else{
+				redirect('login');
+			}
+		
 		}
-		$this->load->view('register',$data);
+		$this->load->view('register');
 		
 	}
 }

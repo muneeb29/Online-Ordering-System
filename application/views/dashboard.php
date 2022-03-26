@@ -4,62 +4,101 @@
 			class="container bg-white border-1 shadow rounded text-center my-4 py-1"
 		>
 			<h1>Dashboard</h1>
+			<h4>Welcome To The User Dashboard</h4>
 		</div>
 
-		<div>
-			<form action="dashboard" method="POST">
-			<div>
-				<input type="text" name="addName" placeholder="Name">
-			</div>
-			<div>
-				<input type="text" name="addPrice" placeholder="Price">
+
+		<div class="container mx-auto">
+			<div class="row">
+			<div class="col">
+			<button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#addItem" aria-expanded="false" >
+				Add Items
+			  </button>	
+		</div>
+		
+		<div class="col">
+			<div class="container mx-auto">
+				<div class="row">
+					<div class="col my-2">
+						<form action="dashboard" method="POST">
+						<div class="input-group mb-3">
+						<select class="form-select-sm" name="searchName"> 
+							<option disabled selected value="">Select One</option>
+							<?php 
+							foreach($mnu as $row)
+							{ 
+							  echo 
+							  '<option value="'.$row->name.'">'.$row->name.'</option>';
+							}
+							?>
+							</select>
+							<input type="submit" name="selectName" value="Update" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#updateItems">
+						</div>	
+						</form>
+					</div>
+					</div>
+				</div>
 			</div>
 
-			<div>
-				<input type="text" name="addQuantity" placeholder="Quantity">
+			<div class="col">
+				<form action="dashboard" method="POST">
+					<div class="input-group mb-3">
+					<select class="form-select-sm" name="deleteItems"> 
+						<option disabled selected value="">Select One</option>
+						<?php 
+						foreach($mnu as $row)
+						{ 
+						  echo 
+						  '<option value="'.$row->name.'">'.$row->name.'</option>';
+						}
+						?>
+						</select>
+						<input type="submit" name="deleteName" value="Delete" class="btn btn-primary">
+					</div>	
+					</form>
 			</div>
-			<div>
-				<input type="text" name="addType" placeholder="Type" class="mb-2">
+	</div>
+	</div>
+
+	<div class="collapse" id="addItem">
+		<div class="container">
+			<div class="row mx-auto">
+			<div class="col-lg-5">
+			<div class="border-1 shadow">
+			<div class="p-5">
+			<div class="text-center">
+					<h4 class="mb-4 fs-4">Add Item</h4>
 			</div>
-			<div>
-				<input type="submit" value="Add" name="addItems" class="btn btn-primary">
+			<form action="dashboard" method="POST">
+			<div class="form-floating mb-3">	
+				<input type="text" name="addName" minlength="3" maxlength="25" class="form-control" required placeholder="Name">
+				<label for="addName">Name: </label/>
+			</div>
+			<div class="form-floating mb-3">
+				<input type="text" name="addPrice" class="form-control" minlength="1" maxlength="5"required  placeholder="Price">
+				<label for="addPrice">Price: </label/>
+			</div>
+			<div class="form-floating mb-3">
+				<input type="number" name="addQuantity" class="form-control" min="1" max="100" required placeholder="Quantity">
+				<label for="addQuantity">Quantity: </label/>
+			</div>
+			<div class="form-floating mb-3">
+				<input type="text" name="addType" class="form-control" minlength="3" maxlength="10" required placeholder="Type" class="mb-2">
+				<label for="addType">Type: </label/>
+			</div>
+			<div class="d-grid">
+				<input type="submit" value="Add" name="addItems" class="btn btn-primary mb-2">
 			</div>
 			</form>
 		</div>
+		</div>
+			</div>
+	</div>
+	</div>
+	</div>
 
-		<form action="dashboard" method="POST">
-		<select class="" name="searchName"> 
-			<option disabled selected value="">Select One</option>
-            <?php 
-            foreach($mnu as $row)
-            { 
-              echo 
-			  '<option value="'.$row->name.'">'.$row->name.'</option>';
-            }
-            ?>
-            </select>
-			<input type="submit" name="selectName" value="Search" class="btn btn-primary">
-			</form>
-
-			<form action="dashboard" method="POST">
-		<select class="" name="deleteItems"> 
-			<option disabled selected value="">Select One</option>
-            <?php 
-            foreach($mnu as $row)
-            { 
-              echo 
-			  '<option value="'.$row->name.'">'.$row->name.'</option>';
-            }
-            ?>
-            </select>
-			<input type="submit" name="deleteName" value="Delete" class="btn btn-primary">
-			</form>
 
 		<?php
-		echo <<<_END
-		<html>
-		<body>
-		_END;
 			foreach ($menu as $items) {
 				echo 	
 				'<div class="container">',
@@ -68,7 +107,7 @@
 				'<div class="border-1 shadow rounded my-5">',
 				'<div class="p-5">',
 				'	<div class="text-center">
-				<h4 class="mb-4 fs-4">Update Details</h4>
+				<h4 class="mb-4 fs-4">Update Item</h4>
 			</div>',
 				'	<form
 				action="dashboard"
@@ -106,7 +145,7 @@
 				'</div>';	
 			  }
 		
-		echo "</body></html>";
+		 "</body></html>";
 		
 		?>
 	</div>

@@ -48,12 +48,14 @@
 
             $data = array(
                 'name' => $addName,
-                'quantity' => $addPrice,
-                'price'=> $addQuantity,
+                'quantity' => $addQuantity,
+                'price'=> $addPrice,
                 'type'=> $addType,
             );
 
             $id = $this->db->insert('menu',$data);
+
+            echo '<script> alert("Item Added!") </script>'; 
             return $data;
         }
 
