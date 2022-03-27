@@ -24,11 +24,11 @@ Database must be created first and must be called ordering otherwise it will not
 ********
 Features 
 ********
-------------------NORMAL USERS------------------------------------------
+--NORMAL USERS
 -Users are able to add, remove, update Qty from menu
 -Users can update their account details
 
-------------------ADMIN USERS------------------------------------------
+--ADMIN USERS
 -Admin has access to dashboard
 -Admin is able to update menu
 -Admin is able to add items to menu
