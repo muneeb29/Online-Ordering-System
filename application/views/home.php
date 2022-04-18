@@ -16,7 +16,7 @@
 			src="<?php echo base_url(); ?>application/images/burgern.jpeg"
 			alt="burger image"
 			style="size: auto"
-			class="rounded"
+			class="img-fluid rounded"
 		/>
 	</div>
 </html>
