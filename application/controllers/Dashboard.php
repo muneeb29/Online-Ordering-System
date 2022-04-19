@@ -53,10 +53,13 @@ class Dashboard extends CI_Controller {
 
 		$data['mnu'] = $this->Admin_model->allItems();
 
+		$data['ord'] = $this->Admin_model->getOrderID();
+
 		if($this->input->post('addItems')){
-		$data['add'] = $this->Admin_model->addItems();
-	
-		}
+			$data['add'] = $this->Admin_model->addItems();
+		
+			}
+
 
 		if($this->input->post('update')){
 		$menuid = $this->input->cookie('menu',TRUE);
@@ -69,6 +72,14 @@ class Dashboard extends CI_Controller {
 					}	
 		
 		$this->load->view('dashboard',$data);
+
+
+		if($this->input->post('orderName')){
+			$data['orders'] = $this->Admin_model->getOrders();
+			$this->load->view('orders',$data);
+		
+			}
+		
 		
 	}
 

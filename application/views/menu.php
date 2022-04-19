@@ -1,6 +1,6 @@
 <div>
-<div class="text-center my-3"> 
-<table class="mx-auto" cellpadding="4" cellspacing="2" border="1" id="table">
+<div class="text-center my-3 table-responsive"> 
+<table class="mx-auto table" style="width:60%" border="1"  id="table">
     <thead>
          <tr>
              <th>Item</th>
@@ -15,8 +15,8 @@
                 ?>
                     <tr>
                        <td><?php echo $type->name;?></td>
-                       <td><?php echo $type->price;?></td>
-                       <td><?php  echo '<input type="number" name="quantity" placeholder="QTY: 1" class="form-control quantity" id="'.$type->menuid.'">';?></td>
+                       <td><?php echo "£$type->price";?></td>
+                       <td><?php  echo '<input type="number" style="width:180px;"  min="1" max="'.$type->quantity.'" name="quantity" placeholder="QTY:" class="form-control quantity" id="'.$type->menuid.'">';?></td>
                        <td><?php echo '<input type="button" class="btn btn-primary addCart" name="addCart" value="Add"
                        data-name="'.$type->name.'"
                        data-price="'.$type->price.'"
@@ -33,8 +33,8 @@
                 ?>
                     <tr>
                        <td><?php echo $items->name;?></td>
-                       <td><?php echo $items->price;?></td>
-                       <td><?php  echo '<input type="number" name="quantity"placeholder="QTY: 1" class="form-control quantity" id="'.$items->menuid.'">';?></td>
+                       <td><?php echo "£$items->price";?></td>
+                       <td><?php  echo '<input type="number" style="width:180px;"  min="1" max="'.$items->quantity.'" name="quantity" placeholder="QTY:" class="form-control quantity" id="'.$items->menuid.'">';?></td>
                        <td><?php echo '<input type="button" class="btn btn-primary addCart" name="addCart" value="Add"
                        data-name="'.$items->name.'"
                        data-price="'.$items->price.'"
@@ -49,8 +49,8 @@
                 ?>
                     <tr>
                        <td><?php echo $starter->name;?></td>
-                       <td><?php echo $starter->price;?></td>
-                       <td><?php  echo '<input type="number" name="quantity" placeholder="QTY: 1" class="form-control quantity" id="'.$starter->menuid.'">';?></td>
+                       <td><?php echo "£$starter->price";?></td>
+                       <td><?php  echo '<input type="number"   min="1" max="'.$starter->quantity.'" name="quantity" placeholder="QTY:" class="form-control quantity" id="'.$starter->menuid.'">';?></td>
                        <td><?php echo '<input type="button" class="btn btn-primary addCart" name="addCart" value="Add"
                        data-name="'.$starter->name.'"
                        data-price="'.$starter->price.'"
@@ -64,8 +64,8 @@
                 ?>
                     <tr>
                        <td><?php echo $mains->name;?></td>
-                       <td><?php echo $mains->price;?></td>
-                       <td><?php  echo '<input type="number" name="quantity" placeholder="QTY: 1" class="form-control quantity" id="'.$mains->menuid.'">';?></td>
+                       <td><?php echo "£$mains->price";?></td>
+                       <td><?php  echo '<input type="number"  min="1" max="'.$mains->quantity.'" name="quantity" placeholder="QTY:" class="form-control quantity" id="'.$mains->menuid.'">';?></td>
                        <td><?php echo '<input type="button" class="btn btn-primary addCart" name="addCart" value="Add"
                        data-name="'.$mains->name.'"
                        data-price="'.$mains->price.'"
@@ -79,8 +79,8 @@
                 ?>
                     <tr>
                        <td><?php echo $desserts->name;?></td>
-                       <td><?php echo $desserts->price;?></td>
-                       <td><?php  echo '<input type="number" name="quantity" placeholder="QTY: 1" class="form-control quantity" id="'.$desserts->menuid.'">';?></td>
+                       <td><?php echo "£$desserts->price";?></td>
+                       <td><?php  echo '<input type="number"   min="1" max="'.$desserts->quantity.'" name="quantity" placeholder="QTY:" class="form-control quantity" id="'.$desserts->menuid.'">';?></td>
                        <td><?php echo '<input type="button" class="btn btn-primary addCart" name="addCart" value="Add"
                        data-name="'.$desserts->name.'"
                        data-price="'.$desserts->price.'"
@@ -94,9 +94,9 @@
                 ?>
                     <tr>
                        <td><?php echo $drink->name;?></td>
-                       <td><?php echo $drink->price;?></td>
-                       <td><?php  echo '<input type="number" name="quantity" placeholder="QTY: 1" class="form-control quantity" id="'.$drink->menuid.'">';?></td>
-                       <td><?php echo '<input type="button" class="btn btn-primary addCart" name="addCart" value="Add"
+                       <td><?php echo "£$drink->price";?></td>
+                       <td><?php  echo '<input type="number"   min="1" max="'.$drink->quantity.'" name="quantity" placeholder="QTY:" class="form-control quantity" id="'.$drink->menuid.'">';?></td>
+                       <td><?php echo '<input type="button" class="btn btn-primary addCart " name="addCart" value="Add"
                        data-name="'.$drink->name.'"
                        data-price="'.$drink->price.'"
                        data-menu_id="'.$drink->menuid.'">'?></td>

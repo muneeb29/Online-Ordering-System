@@ -119,6 +119,31 @@
             $this->db->delete('menu');
         }
 
+        public function getOrderID(){
+            $this->db->select("orderid");
+            $this->db->from('orders');
+            $query = $this->db->get(); 
+            $data = $query->result();
+            return $data;
+        }
+
+        public function getOrders(){
+            $selectID = $this->input->post('ordName');
+
+            $this->db->select("*");
+            $this->db->from('order_menu');
+            $this->db->where('orderid',$selectID);
+
+            $query = $this->db->get(); 
+            $data = $query->result();
+           
+            // $menuid='';
+            // foreach($data as $o){
+            //     $menuid = $o->menuid;
+            // }
+            return $data;
+        }
+
  
 			
 

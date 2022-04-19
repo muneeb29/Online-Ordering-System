@@ -3,11 +3,12 @@
 <div class="container bg-white border-1 shadow rounded text-center my-4 py-1">
 		<h1>Checkout</h1>
 	</div>
-<div>
-<table class="mx-auto" cellpadding="4" cellspacing="2" border="1" id="table">
+
+<div class="table-responsive">
+<table class="table align-middle mx-auto" id="table" style="width:60%">
     <thead>
          <tr>
-             <th>Item</th>
+             <th>Items</th>
              <th>Price</th>
              <th>Total</th>
              <th>Quantity</th>
@@ -19,16 +20,16 @@
                 ?>
                     <tr>
                        <td><?php echo $type->name;?></td>
-                       <td><?php echo $type->price;?></td>
-                       <td><?php echo $type->total;?></td>
+                       <td><?php echo "£$type->price";?></td>
+                       <td><?php echo "£$type->total";?></td>
 					   <td><?php echo $type->quantity;?></td>
-                       <td><?php echo '<input type="number" name="qty" min="1" id="'.$type->menuid.'" placeholder="Update Qty: '.$type->quantity.'">'?></td>
+                       <td><?php echo '<input type="number" style="width:50px;" name="qty" min="1"  id="'.$type->menuid.'" placeholder="Qty:">'?></td>
                      
-                     <td><?php echo '<input type="button" class="btn btn-primary quant" name="quant" value="Update"
+                     <td ><?php echo '<input type="button" class="btn btn-primary quant" name="quant" value="Update"
                        data-price="'.$type->price.'"
                        data-menu_id="'.$type->menuid.'">'?></td>
                      
-                     <td><?php echo '<input type="button" class="btn btn-primary dlt" name="dlt" value="Remove"
+                     <td ><?php echo '<input type="button" class="btn btn-primary dlt" name="dlt" value="Remove"
                       data-order_menuid="'.$type->order_menuid.'"
                       data-menu_id="'.$type->menuid.'">'?></td>
                     </tr>
@@ -41,7 +42,7 @@
                 ?>
                     <tr>      
 					<th>Total</th>
-                       <td><?php echo $type->total;?></td>			   
+                       <td><?php echo "£$type->total";?></td>			   
                      </tr>
 
            <?php } ?>
