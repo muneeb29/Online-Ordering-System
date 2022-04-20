@@ -41,6 +41,30 @@
 			</div>
 
 			<div class="col">
+				<div class="container mx-auto">
+					<div class="row">
+						<div class="col my-2">
+							<form action="dashboard" method="POST">
+							<div class="input-group mb-3">
+							<select class="form-select-sm" name="ordName"> 
+								<option disabled selected value="">Select Order</option>
+								 <?php 
+								foreach($ord as $row)
+								{ 
+								  echo 
+								  '<option value="'.$row->orderid.'">'.$row->orderid.'</option>';
+								}
+								?> 
+								</select>
+								<input type="submit" name="orderName" value="Select" class="btn btn-primary">
+							</div>	
+							</form>
+						</div>
+						</div>
+					</div>
+				</div>
+
+			<div class="col">
 				<form action="dashboard" method="POST">
 					<div class="input-group mb-3">
 					<select class="form-select-sm" name="deleteItems"> 
@@ -58,6 +82,7 @@
 					</form>
 			</div>
 	</div>
+	
 	</div>
 
 	<div class="collapse" id="addItem">
@@ -149,31 +174,6 @@
 		
 		?>
 		</div>
-
-
-		<div class="col">
-			<div class="container mx-auto">
-				<div class="row">
-					<div class="col my-2">
-						<form action="dashboard" method="POST">
-						<div class="input-group mb-3">
-						<select class="form-select-sm" name="ordName"> 
-							<option disabled selected value="">Select Order</option>
-							 <?php 
-							foreach($ord as $row)
-							{ 
-							  echo 
-							  '<option value="'.$row->orderid.'">'.$row->orderid.'</option>';
-							}
-							?> 
-							</select>
-							<input type="submit" name="orderName" value="Select" class="btn btn-primary">
-						</div>	
-						</form>
-					</div>
-					</div>
-				</div>
-			</div>
 
 	</div>
 </html>
