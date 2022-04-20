@@ -137,13 +137,22 @@
             $query = $this->db->get(); 
             $data = $query->result();
            
-            // $menuid='';
-            // foreach($data as $o){
-            //     $menuid = $o->menuid;
-            // }
             return $data;
         }
 
+
+        public function getTotal(){
+            $selectID = $this->input->post('ordName');
+
+            $this->db->select("total");
+            $this->db->from('orders');
+            $this->db->where('orderid',$selectID);
+
+            $query = $this->db->get(); 
+            $data = $query->result();
+           
+            return $data;
+        }
  
 			
 

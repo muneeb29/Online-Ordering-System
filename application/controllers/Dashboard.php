@@ -76,6 +76,7 @@ class Dashboard extends CI_Controller {
 
 		if($this->input->post('orderName')){
 			$data['orders'] = $this->Admin_model->getOrders();
+			$data['total'] = $this->Admin_model->getTotal();
 			$this->load->view('orders',$data);
 		
 			}

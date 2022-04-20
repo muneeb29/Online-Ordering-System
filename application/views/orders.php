@@ -11,11 +11,21 @@
          </tr>
      </thead>
      <tbody>
+     <?php $num=0;?>
+     <?php $tot=0;?>
+     
+     <?php 
+                foreach($total as $row){
+                    $tot = $row->total;
+                }
+                ?>
+
 
      <?php 
      if($orders != null) :
                 foreach($orders as $row){
                 ?>
+       <?php $num =  $row->orderid;?>
 
         <div class="container">
             <div class="col">
@@ -28,7 +38,13 @@
         </div>
 
         <?php } ?>
-
+       
+        <tr>
+        <th><?php echo"Order ID:  $num";?></th>
+        </tr>
+        <tr>
+        <th><?php echo"Order Total:  £$tot";?></th>
+        </tr>
 
         <?php 
          else : 
