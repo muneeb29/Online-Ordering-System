@@ -26,7 +26,8 @@ INSERT INTO `customer` ( `customerid`, `firstname`, `surname`, `address`, `telep
 CREATE TABLE `orders` (
   `orderid` int(11) NOT NULL,
   `customerid` int(11) NOT NULL,
-  `total` decimal(6,2) NOT NULL
+  `total` decimal(6,2) NOT NULL,
+  `status` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- Payment Table

@@ -98,7 +98,7 @@
       
             );
 
-            $id = $this->db->insert('order_menu',$data);
+            $this->db->insert('order_menu',$data);
         }
 	}
 

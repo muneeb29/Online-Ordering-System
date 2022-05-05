@@ -89,6 +89,22 @@
 		
 	}
 
+	public function ordered($custID){
+
+		$status = "Ordered";
+
+
+		$data = array(
+			'status' => $status,
+
+		
+		);
+		
+		$this->db->update('orders',$data);
+		$this->db->where("custid = '$custID'");
+		
+	}
+
 
 
 

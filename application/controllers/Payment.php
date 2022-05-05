@@ -38,6 +38,7 @@ class Payment extends CI_Controller {
 
 		if($this->input->post('pay')){
 			$data['paid'] = $this->Payment_model->payment($orderID, $custID, $total, $cardNumber);
+			$data['od'] = $this->Payment_model->ordered($custID);
 			redirect('Paid');
 		}
 
