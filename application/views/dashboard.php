@@ -81,6 +81,25 @@
 					</div>	
 					</form>
 			</div>
+
+
+			<div class="col">
+				<form action="dashboard" method="POST">
+					<div class="input-group mb-3">
+					<select class="form-select-sm" name="orderedItems"> 
+						<option disabled selected value="">Select Pending</option>
+						<?php 
+						foreach($ordered as $row)
+						{ 
+						  echo 
+						  '<option value="'.$row->orderid.'">'.$row->orderid.'</option>';
+						}
+						?>
+						</select>
+						<input type="submit" name="orderedName" value="Select" class="btn btn-primary">
+					</div>	
+					</form>
+			</div>
 	</div>
 	
 	</div>

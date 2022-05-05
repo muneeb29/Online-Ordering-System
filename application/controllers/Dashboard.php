@@ -55,6 +55,9 @@ class Dashboard extends CI_Controller {
 
 		$data['ord'] = $this->Admin_model->getOrderID();
 
+		$data['ordered'] = $this->Admin_model->getOrdered();
+
+
 		if($this->input->post('addItems')){
 			$data['add'] = $this->Admin_model->addItems();
 		
@@ -80,6 +83,24 @@ class Dashboard extends CI_Controller {
 			$this->load->view('orders',$data);
 		
 			}
+
+			$selectID = 0;
+		if($this->input->post('orderedName')){
+				$data['orders'] = $this->Admin_model->getOrderItem();
+				$data['total'] = $this->Admin_model->getTotalItem();
+
+				$selectID = $this->input->post('orderedItems');
+
+				set_cookie('selectID', $selectID, 10);
+
+				$this->load->view('ordered',$data);
+			
+				}	
+
+		if($this->input->post('completeOrder')){
+			$selectID = $this->input->cookie('selectID',TRUE);
+				$data['complete'] = $this->Admin_model->completeOrder($selectID);
+			}	
 		
 		
 	}

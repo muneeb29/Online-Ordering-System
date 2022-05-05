@@ -153,7 +153,61 @@
            
             return $data;
         }
+
+        public function getOrderItem(){
+            $selectID = $this->input->post('orderedItems');
+
+            $this->db->select("*");
+            $this->db->from('order_menu');
+            $this->db->where('orderid',$selectID);
+
+            $query = $this->db->get(); 
+            $data = $query->result();
+           
+            return $data;
+        }
+
+
+        public function getTotalItem(){
+            $selectID = $this->input->post('orderedItems');
+
+            $this->db->select("total");
+            $this->db->from('orders');
+            $this->db->where('orderid',$selectID);
+
+            $query = $this->db->get(); 
+            $data = $query->result();
+           
+            return $data;
+        }
  
+
+        public function getOrdered(){
+            $status = "Ordered";
+
+            $this->db->select("*");
+            $this->db->from('orders');
+            $this->db->where('status',$status);
+
+            $query = $this->db->get(); 
+            $data = $query->result();
+           
+            return $data;
+        }
+
+         
+
+        public function completeOrder($selectID){
+            $status = "Complete";
+            $data = array(
+                'status' => $status,  
+            );
+             
+            $this->db->where("orderid = '$selectID'");
+             $this->db->update('orders',$data);
+
+        }
+			
 			
 
          
