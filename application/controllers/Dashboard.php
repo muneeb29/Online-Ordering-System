@@ -100,6 +100,7 @@ class Dashboard extends CI_Controller {
 		if($this->input->post('completeOrder')){
 			$selectID = $this->input->cookie('selectID',TRUE);
 				$data['complete'] = $this->Admin_model->completeOrder($selectID);
+				redirect($this->uri->uri_string());
 			}	
 		
 		

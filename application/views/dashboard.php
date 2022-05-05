@@ -40,14 +40,14 @@
 				</div>
 			</div>
 
-			<div class="col">
+			<div class="row">
 				<div class="container mx-auto">
 					<div class="row">
 						<div class="col my-2">
 							<form action="dashboard" method="POST">
 							<div class="input-group mb-3">
 							<select class="form-select-sm" name="ordName"> 
-								<option disabled selected value="">Select Order</option>
+								<option disabled selected value="">Select All Orders</option>
 								 <?php 
 								foreach($ord as $row)
 								{ 
@@ -64,7 +64,7 @@
 					</div>
 				</div>
 
-			<div class="col">
+			<div class="row">
 				<form action="dashboard" method="POST">
 					<div class="input-group mb-3">
 					<select class="form-select-sm" name="deleteItems"> 
@@ -83,11 +83,11 @@
 			</div>
 
 
-			<div class="col">
+			<div class="row">
 				<form action="dashboard" method="POST">
 					<div class="input-group mb-3">
 					<select class="form-select-sm" name="orderedItems"> 
-						<option disabled selected value="">Select Pending</option>
+						<option disabled selected value="">Select Pending Orders</option>
 						<?php 
 						foreach($ordered as $row)
 						{ 
