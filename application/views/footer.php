@@ -17,16 +17,16 @@
           <h4 class="">Help</h4>
           <ul class="list-unstyled mb-3">
             <li>
-              <a href="#!" class="text-white mx-2">Privacy Policy</a>
+              <a href="<?php echo base_url(); ?>index.php/privacy" class="text-white mx-2">Privacy Policy</a>
             </li>
             <li>
-              <a href="#!" class="text-white mx-2">Terms & Conditions</a>
+              <a href="<?php echo base_url(); ?>index.php/terms" class="text-white mx-2">Terms & Conditions</a>
             </li>
             <li>
-              <a href="#!" class="text-white mx-2">Returns Information</a>
+              <a href="<?php echo base_url(); ?>index.php/returns" class="text-white mx-2">Returns Information</a>
             </li>
 			<li>
-              <a href="#!" class="text-white mx-2">Delivery Information</a>
+              <a href="<?php echo base_url(); ?>index.php/delivery" class="text-white mx-2">Delivery Information</a>
             </li>
           </ul>
         </div>
