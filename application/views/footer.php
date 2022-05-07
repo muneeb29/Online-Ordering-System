@@ -3,6 +3,26 @@
 		<button onclick="topFunction()"  class="btn btn-primary scroll-top" id="topButton">Go to top</button>
 </div>
 
+<script>
+mybutton = document.getElementById("topButton");
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } 
+  
+  else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0; 
+  document.documentElement.scrollTop = 0; 
+}
+</script>
+
   <footer class="bg-dark text-center text-lg-start text-white">
     <div class="container p-3">
 
