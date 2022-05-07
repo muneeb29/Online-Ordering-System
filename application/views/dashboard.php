@@ -41,9 +41,7 @@
 			</div>
 
 			<div class="row">
-				<div class="container mx-auto">
-					<div class="row">
-						<div class="col my-2">
+					<div class="col">
 							<form action="dashboard" method="POST">
 							<div class="input-group mb-3">
 							<select class="form-select-sm" name="ordName"> 
@@ -59,12 +57,10 @@
 								<input type="submit" name="orderName" value="Select" class="btn btn-primary">
 							</div>	
 							</form>
-						</div>
-						</div>
-					</div>
-				</div>
+						</div>	
+					</div>		
 
-			<div class="row">
+				<div class="row">
 				<form action="dashboard" method="POST">
 					<div class="input-group mb-3">
 					<select class="form-select-sm" name="deleteItems"> 
@@ -80,7 +76,9 @@
 						<input type="submit" name="deleteName" value="Delete" class="btn btn-primary">
 					</div>	
 					</form>
-			</div>
+					
+				</div>
+	
 
 
 			<div class="row">
