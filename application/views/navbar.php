@@ -24,13 +24,15 @@
 			<div class="container-fluid">
 				<ul class="navbar-nav">
 					<li class="navbar-brand">
-						<img
+					<a href="home">	
+					<img
 						src="<?php echo base_url(); ?>application/images/logo.svg"
 							class="img-fluid"
 							alt="Icon"
 							width="35"
 							height="30"
 						/>
+						</a>
 					</li>
 
 					<li class="nav-item">
