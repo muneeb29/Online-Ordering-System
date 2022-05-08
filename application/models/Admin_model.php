@@ -144,7 +144,7 @@
         public function getTotal(){
             $selectID = $this->input->post('ordName');
 
-            $this->db->select("total");
+            $this->db->select("*");
             $this->db->from('orders');
             $this->db->where('orderid',$selectID);
 
@@ -199,6 +199,17 @@
 
         public function completeOrder($selectID){
             $status = "Complete";
+            $data = array(
+                'status' => $status,  
+            );
+             
+            $this->db->where("orderid = '$selectID'");
+             $this->db->update('orders',$data);
+
+        }
+
+        public function cancelOrder($selectID){
+            $status = "Cancelled";
             $data = array(
                 'status' => $status,  
             );

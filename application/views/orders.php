@@ -13,10 +13,12 @@
      <tbody>
      <?php $num=0;?>
      <?php $tot=0;?>
+     <?php $stats=0;?>
      
      <?php 
                 foreach($total as $row){
                     $tot = $row->total;
+                    $stats = $row->status;
                 }
                 ?>
 
@@ -44,6 +46,9 @@
         </tr>
         <tr>
         <th><?php echo"Order Total:  £$tot";?></th>
+        </tr>
+        <tr>
+        <th><?php echo"Order Status:  $stats";?></th>
         </tr>
 
         <?php 

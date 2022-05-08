@@ -102,6 +102,12 @@ class Dashboard extends CI_Controller {
 				$data['complete'] = $this->Admin_model->completeOrder($selectID);
 				redirect($this->uri->uri_string());
 			}	
+
+			if($this->input->post('cancelOrder')){
+				$selectID = $this->input->cookie('selectID',TRUE);
+					$data['cancel'] = $this->Admin_model->cancelOrder($selectID);
+					redirect($this->uri->uri_string());
+				}		
 		
 		
 	}

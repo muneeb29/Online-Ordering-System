@@ -49,7 +49,8 @@
             <th>
                 <form action="dashboard" method="POST" class="d-grid mx-auto">
                 <input type="submit" name="completeOrder" value="Mark Order As Complete" class="btn btn-primary">
-                </form>
+                <input type="submit" name="cancelOrder" value="Cancel Order" class="btn btn-primary my-2">   
+            </form>
             </th>
         </tr>
 
