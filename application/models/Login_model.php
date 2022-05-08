@@ -52,9 +52,12 @@
 	}
 
 	public function orders($customerid){
+
+		$status = "Unpaid";
 		$data = array(
 			'customerid'=>$customerid,
-			'total' =>0
+			'total' =>0,
+			'status' => $status
 		);
 	
 		$this->db->insert('orders',$data);
