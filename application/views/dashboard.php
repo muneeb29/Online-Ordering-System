@@ -7,6 +7,12 @@
 			<h4>Welcome To The Admin Dashboard</h4>
 		</div>
 
+		<div class="container bg-white text-center mb-2">
+			
+			<h4 id="timeDate"></h4>
+
+		</div>
+
 
 		<div class="container mx-auto">
 			<div class="row">
@@ -16,33 +22,11 @@
 			  </button>	
 		</div>
 		
-		<div class="col">
-			<div class="container mx-auto">
-				<div class="row">
-					<div class="col my-2">
-						<form action="dashboard" method="POST">
-						<div class="input-group mb-3">
-						<select class="form-select-sm" name="searchName"> 
-							<option disabled selected value="">Select One</option>
-							<?php 
-							foreach($mnu as $row)
-							{ 
-							  echo 
-							  '<option value="'.$row->name.'">'.$row->name.'</option>';
-							}
-							?>
-							</select>
-							<input type="submit" name="selectName" value="Update" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#updateItems">
-						</div>	
-						</form>
-					</div>
-					</div>
-				</div>
-			</div>
 
-			<div class="row">
+			<div class="row my-2">
 					<div class="col">
 							<form action="dashboard" method="POST">
+							<label for="ordName" class="mb-2">Select All Orders</label>
 							<div class="input-group mb-3">
 							<select class="form-select-sm" name="ordName"> 
 								<option disabled selected value="">Select All Orders</option>
@@ -58,10 +42,40 @@
 							</div>	
 							</form>
 						</div>	
+						<div class="col">
+							<div class="container mx-auto">
+								<div class="row">
+									<div class="col my-2">
+										<form action="dashboard" method="POST">
+										<label for="ordName" class="mb-2">Select Item To Update</label>
+										<div class="input-group mb-3">
+										<select class="form-select-sm" name="searchName"> 
+											<option disabled selected value="">Select One</option>
+											<?php 
+											foreach($mnu as $row)
+											{ 
+											  echo 
+											  '<option value="'.$row->name.'">'.$row->name.'</option>';
+											}
+											?>
+											</select>
+											<input type="submit" name="selectName" value="Update" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#updateItems">
+										</div>	
+										</form>
+									</div>
+				
+									</div>
+								</div>
+							</div>
+						</div>
+
+
 					</div>		
 
 				<div class="row">
+				<div class="col">
 				<form action="dashboard" method="POST">
+					<label for="deleteItems" class="mb-2">Select Item To Delete</label>
 					<div class="input-group mb-3">
 					<select class="form-select-sm" name="deleteItems"> 
 						<option disabled selected value="">Select One</option>
@@ -76,13 +90,15 @@
 						<input type="submit" name="deleteName" value="Delete" class="btn btn-primary">
 					</div>	
 					</form>
-					
-				</div>
-	
+					</div>
+				
 
-
-			<div class="row">
+			<div class="col">
+				<div class="container mx-auto">
+					<div class="row">
+						<div class="col my-2">
 				<form action="dashboard" method="POST">
+				<label for="orderedItems" class="mb-2">Select Orders To Manage</label>
 					<div class="input-group mb-3">
 					<select class="form-select-sm" name="orderedItems"> 
 						<option disabled selected value="">Select Pending Orders</option>
@@ -98,9 +114,13 @@
 					</div>	
 					</form>
 			</div>
+
+		</div>
 	</div>
+</div>
+		</div>
 	
-	</div>
+
 
 	<div class="collapse" id="addItem">
 		<div class="container">
@@ -181,6 +201,7 @@
 				</div>',
 		
 				'</form>',
+				'</div>',
 				'</div>',
 				'</div>',
 				'</div>',

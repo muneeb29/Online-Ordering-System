@@ -77,9 +77,22 @@ function updateCart(){
         }
 
 
+        var currentTime = '<?=timeDate();?>';
+        function updateTime(){
+        var currentdate =  new Date(); 
+        var datetime = currentdate.toLocaleString();
+            
+          $('#timeDate').html(datetime);
+          datetime++;
+        }
+        $(function(){
+          setInterval(updateTime, 1000);
+        });      
+
 
 $(document).ready(function() {
     addToCart();
     updateCart();
     deleteCart();
+    updateTime();
 });
