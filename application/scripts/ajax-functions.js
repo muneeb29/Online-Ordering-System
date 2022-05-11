@@ -2,10 +2,6 @@ function empty(){
     alert("Cart Is Empty")
 }
 
-function ordered(){
-    alert("Already Ordered")
-}
-
 function addToCart(){
 $('.addCart').click(function(){
     var name = $(this).data("name");
