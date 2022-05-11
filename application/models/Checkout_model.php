@@ -96,4 +96,14 @@
         $this->db->where('order_menuid', $order_menuid);
         $this->db->delete('order_menu');
     }
+
+    public function checkStatus($orderID){
+        $this->db->select("status");
+        $this->db->from('orders');
+        $this->db->where('orderid', $orderID);
+        $query = $this->db->get(); 
+        $data = $query->result();
+        return $data;
+
+      }
 }

@@ -50,7 +50,27 @@
 </table>
 </div>
 
-<?php if($amount > 0) : ?>
+<?php
+ foreach($statsu as $abc){
+    $status = $abc->status;
+
+ }
+?>
+
+
+    <?php if($status == "Ordered") : ?>
+    <div class="d-grid col-6 mx-auto mb-2 my-2">
+    <a		
+				role="button"
+				class="btn btn-primary btn-large"
+                title="Ordered"
+                onclick="ordered()"
+				>Payment</a
+			>
+            </div>      
+            
+            
+            <?php elseif($status == "Unpaid") : ?>
 <div class="d-grid col-6 mx-auto mb-2 my-2">
 <a
 				href="<?php echo base_url(); ?>index.php/payment"
@@ -58,7 +78,7 @@
 				class="btn btn-primary btn-large"
 				>Payment</a
 			>
-            </div>
+            </div>            
 
 <?php else : ?>
     <div class="d-grid col-6 mx-auto mb-2 my-2">
@@ -69,7 +89,9 @@
                 onclick="empty()"
 				>Payment</a
 			>
-            </div>        
+            </div>   
+            
+            
     <?php endif;?>
 
 </div>
