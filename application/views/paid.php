@@ -10,12 +10,11 @@
 	<h6 class="my-3 mb-3">Please Remember This Number</h6>
 
     <div class="d-grid col-6 mx-auto mb-2 my-3">
-			<a
-				href="<?php echo base_url(); ?>index.php/Home"
-				role="button"
-				class="btn btn-primary mb-4"
-				>Return To Home Page</a
-			>
+
+
+			<form action="paid"  method="POST">
+				<input type="submit" name="next" value="Return To Home Page" style="width: 750px" class="btn btn-primary mb-4">
+			</form>
 		</div>
 
 </div>

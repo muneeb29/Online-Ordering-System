@@ -25,6 +25,38 @@
 
     }
 
+    public function getCustID(){
+        $customerid = $this->session->userdata('user');
+        extract($customerid);
+      
+        $this->db->select("customerid");
+        $this->db->from("customer");
+        $this->db->where("username = '$username'");
+        $query = $this->db->get();
+        $result = $query->result();
+        
+
+        $customerid='';
+        foreach($result as $o){
+            $customerid = $o->customerid;
+        }
+        return $customerid;
+    
+}
+
+        public function newOrder($customerid){
+
+            $status = "Unpaid";
+            $data = array(
+                'customerid'=>$customerid,
+                'total' =>0,
+                'status' => $status
+            );
+	
+		$this->db->insert('orders',$data);
+	}
+
     }
+
 
         ?>
