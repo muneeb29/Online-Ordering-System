@@ -17,8 +17,13 @@ class Payment extends CI_Controller {
 	{
 		$orderID = $this->Payment_model->getOrderID();
 		$total = $this->Payment_model->totalOrder($orderID);
+		
+		$status = $this->Payment_model->checkStatus($orderID);
+		if($status == "Ordered"){
+			redirect("Paid");
+		}
 
-		if($total > 0){
+		else if($total > 0){
 			$this->getPayment($orderID, $total);
 		}
 

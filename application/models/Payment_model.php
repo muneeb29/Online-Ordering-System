@@ -102,6 +102,24 @@
 		
 	}
 
+	public function checkStatus($orderID){
+        $this->db->select("status");
+        $this->db->from('orders');
+        $this->db->where('orderid', $orderID);
+		$query = $this->db->get();
+		$result = $query->result();
+		
+
+		$status='';
+		foreach($result as $o){
+			$status = $o->status;
+		}
+		return $status;
+
+      }
+
+
+
 
 
 
